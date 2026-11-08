@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedON Student · Semiología osteoarticular · Cadera y pelvis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#04302B;--ink2:#36564f;--muted:#4A6660;--deep:#04302B;--g:#3CC168;--g2:#1D8446;--gl:#EAF6EE;
+  --line:#D3E4DC;--bg:#F4F8F6;--card:#fff;--exa:#2f6fd6;--exal:#e8f0fd;--pain:#e5484d;--painl:#fdeced;
+  --ins:#d98a00;--insl:#fff4df;--na:#8a9a96;--r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:136px}
+body{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;line-height:1.12}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+
+/* ===== Portada ===== */
+.hero{background:linear-gradient(160deg,#04302B 0%,#022320 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:-120px;top:-60px;width:520px;height:520px;border:46px solid rgba(60,193,104,.10);border-radius:50%}
+.hero::after{content:"";position:absolute;right:-160px;bottom:-220px;width:560px;height:560px;border:3px solid rgba(60,193,104,.5);border-radius:50%}
+.hero-top{display:flex;justify-content:space-between;align-items:center;padding:22px 0 0;position:relative;z-index:1;gap:20px}
+.hero-top img.logo{height:62px}
+.hero-top img.seal{height:46px}
+.hero-body{position:relative;z-index:1;padding:56px 0 64px;display:grid;grid-template-columns:1fr;gap:40px;align-items:center;max-width:760px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g)}
+.kicker::before{content:"";width:34px;height:3px;background:var(--g);border-radius:3px}
+.hero h1{font-size:clamp(42px,6vw,76px);font-weight:800;letter-spacing:-.02em;margin:14px 0 18px}
+.hero h1 span{color:var(--g)}
+.hero .lead{font-size:18px;color:#cfe4dd;max-width:560px}
+.author{margin-top:28px;padding-left:16px;border-left:4px solid var(--g)}
+.author b{display:block;font-size:17px}
+.author small{display:block;color:#a9c8bf;font-size:13.5px}
+.legend-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.hero-stage{background:rgba(255,255,255,.96);border-radius:28px;padding:10px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.hero-stage svg{width:100%;display:block}
+
+/* ===== Navegación ===== */
+nav.top{position:sticky;top:67px;z-index:50;background:rgba(4,48,43,.97);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(0,0,0,.18)}
+nav.top .wrap{display:flex;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:none;padding-top:10px;padding-bottom:10px}
+nav.top .wrap::-webkit-scrollbar{display:none}
+nav.top a{flex:none;color:#cfe4dd;text-decoration:none;font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;transition:.2s}
+nav.top a:hover{background:rgba(255,255,255,.08);color:#fff}
+nav.top a.on{background:var(--g);color:var(--deep)}
+nav.top .brand{display:flex;align-items:center;gap:10px;margin-right:10px;color:#fff;font-weight:800;font-size:14px;flex:none}
+nav.top .brand img{height:30px}
+
+/* ===== Secciones ===== */
+section.sec{padding:70px 0 20px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(30px,3.6vw,46px);font-weight:800;letter-spacing:-.015em}
+.sec-head p{color:var(--muted);max-width:560px;font-size:15.5px}
+.num{font-size:14px;font-weight:800;color:var(--g2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:block}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);padding:24px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g2)}
+.muted{color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{border:1.5px solid var(--line);background:#fff;color:var(--ink);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:600;transition:.18s}
+.tab:hover{border-color:var(--g2)}
+.tab.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.sub-tabs .tab{font-size:13px;padding:7px 13px}
+.pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:12px;font-weight:700}
+
+/* ===== Laboratorio de maniobras ===== */
+.lab{display:grid;grid-template-columns:270px 1fr;gap:22px;align-items:start}
+.lab-menu{position:sticky;top:80px;display:flex;flex-direction:column;gap:14px}
+.menu-group{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:12px}
+.menu-group h4{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:2px 6px 8px}
+.mbtn{display:flex;width:100%;align-items:center;gap:10px;text-align:left;background:none;border:0;padding:9px 10px;border-radius:12px;font-size:14px;font-weight:600;color:var(--ink);transition:.15s}
+.mbtn small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;line-height:1.3}
+.mbtn:hover{background:var(--gl)}
+.mbtn.on{background:var(--ink);color:#fff}
+.mbtn.on small{color:#bfe3d6}
+.mbtn .ix{flex:none;width:28px;height:28px;border-radius:9px;background:var(--gl);color:var(--g2);display:grid;place-items:center;font-weight:800;font-size:13px}
+.mbtn.on .ix{background:var(--g);color:var(--deep)}
+
+.player{background:#fff;border:1.5px solid var(--line);border-radius:26px;overflow:hidden}
+.p-head{padding:20px 24px 14px;display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;border-bottom:1.5px solid var(--line)}
+.p-head h3{font-size:28px;font-weight:800}
+.p-head .sub{color:var(--muted);font-size:14px;margin-top:4px}
+.variants{display:flex;gap:6px;flex-wrap:wrap;background:var(--bg);padding:5px;border-radius:14px;border:1.5px solid var(--line)}
+.variants button{border:0;background:none;padding:7px 12px;border-radius:10px;font-size:12.5px;font-weight:700;color:var(--ink2)}
+.variants button.on{background:#fff;box-shadow:0 2px 8px rgba(4,48,43,.12);color:var(--ink)}
+.variants button.on.pos{color:var(--pain)}
+.p-body{display:grid;grid-template-columns:1fr 250px}
+.stage-wrap{position:relative;background:linear-gradient(180deg,#f7fbf9 0%,#eef6f2 100%);border-right:1.5px solid var(--line)}
+.stage-wrap svg{width:100%;display:block;cursor:grab;touch-action:none;user-select:none}
+.stage-wrap svg.dragging{cursor:grabbing}
+.phase-badge{position:absolute;left:16px;top:14px;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:14px;font-weight:700;font-size:13px;color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.12);transition:background .3s}
+.phase-badge .ic{width:26px;height:26px;border-radius:8px;background:rgba(255,255,255,.22);display:grid;place-items:center}
+.phase-badge small{display:block;font-weight:500;font-size:11px;opacity:.9;line-height:1.2}
+.ph-act{background:var(--g2)}.ph-exa{background:var(--exa)}.ph-ins{background:var(--ins)}.ph-tra{background:#b42318}
+.cam-ctrl{position:absolute;right:12px;top:12px;display:flex;gap:6px}
+.cam-ctrl button{border:1.5px solid var(--line);background:rgba(255,255,255,.9);border-radius:10px;padding:5px 9px;font-size:11.5px;font-weight:700;color:var(--ink2)}
+.cam-ctrl button:hover{border-color:var(--g2)}
+.drag-hint{position:absolute;left:16px;bottom:12px;font-size:11.5px;color:var(--muted);background:rgba(255,255,255,.85);padding:4px 10px;border-radius:8px}
+.side{padding:18px;display:flex;flex-direction:column;gap:16px}
+.eva{background:var(--bg);border-radius:16px;padding:14px;border:1.5px solid var(--line)}
+.eva-top{display:flex;justify-content:space-between;align-items:center}
+.eva-val{font-size:30px;font-weight:800;line-height:1}
+.eva-bar{height:12px;border-radius:999px;background:linear-gradient(90deg,#3ddc6f,#f5c518 50%,#e5484d);position:relative;margin-top:12px}
+.eva-knob{position:absolute;top:50%;width:22px;height:22px;border-radius:50%;background:#fff;border:4px solid var(--ink);transform:translate(-50%,-50%);transition:left .25s}
+.eva-face{width:44px;height:44px}
+.eva-where{font-size:13px;margin-top:10px;font-weight:600;min-height:20px}
+.side .who{display:flex;flex-direction:column;gap:8px;font-size:12.5px}
+.who div{display:flex;align-items:center;gap:8px}
+.result{border-radius:16px;padding:14px;font-size:13.5px;border:1.5px solid var(--line);background:#fff;display:none}
+.result.show{display:block;animation:fadeup .4s ease}
+.result b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.result.pos{background:var(--painl);border-color:#f6c3c5}
+.result.pos b{color:var(--pain)}
+.result.neg{background:var(--gl);border-color:#bfe8cd}
+.result.neg b{color:var(--g2)}
+.p-foot{border-top:1.5px solid var(--line);padding:16px 22px 20px}
+.timeline{display:flex;gap:6px;margin-bottom:14px;align-items:stretch}
+.tl-group{display:flex;gap:6px;flex-direction:column;flex:var(--n)}
+.tl-group .tl-lbl{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.tl-steps{display:flex;gap:5px}
+.tl-step{flex:1;height:36px;border-radius:10px;border:0;position:relative;font-weight:800;font-size:13px;color:#fff;opacity:.4;transition:.2s}
+.tl-step.on{opacity:1;transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.15)}
+.tl-step.done{opacity:.75}
+.tl-step .pn{position:absolute;right:-4px;top:-7px;width:18px;height:18px;border-radius:50%;background:var(--pain);border:2px solid #fff;font-size:10px;display:grid;place-items:center}
+.step-card{display:flex;gap:16px;align-items:flex-start;min-height:92px}
+.step-n{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:800;font-size:20px;color:#fff}
+.step-card h4{font-size:19px;font-weight:800;margin-bottom:4px}
+.step-card p{font-size:15px;color:var(--ink2)}
+.step-card .who-txt{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.controls{display:flex;gap:8px;align-items:center;margin-top:16px;flex-wrap:wrap}
+.cbtn{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 16px;font-weight:700;font-size:14px;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.cbtn:hover{border-color:var(--ink)}
+.cbtn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cbtn.primary:hover{background:#12534c}
+.cbtn svg{width:16px;height:16px}
+svg.i{width:14px;height:14px;display:inline-block;vertical-align:-2px;flex:none}
+.goto svg.i{width:12px;height:12px}
+.b svg.i{width:13px;height:13px}
+.cbtn.primary svg.i{margin-right:2px}
+.speed{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);font-weight:600}
+.speed input{accent-color:var(--g2);width:110px}
+.prog{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:12px}
+.prog i{display:block;height:100%;width:0;background:var(--g2);transition:width .1s linear}
+
+.painpulse{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(.85);opacity:.85}50%{transform:scale(1.15);opacity:1}}
+.flow{stroke-dasharray:10 6;animation:dash .6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-16}}
+@keyframes fadeup{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ===== Anatomía ===== */
+.anat-svg{width:100%;display:block}
+.bone{cursor:pointer;transition:filter .2s,opacity .2s}
+.bone:hover{filter:brightness(1.06) drop-shadow(0 0 6px rgba(60,193,104,.7))}
+.dim .bone:not(.hl){opacity:.35}
+.info{background:var(--bg);border:1.5px solid var(--line);border-radius:16px;padding:16px;min-height:96px}
+.info h4{font-size:20px;font-weight:800;margin-bottom:4px}
+.facts{display:grid;gap:10px}
+.fact{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--bg);border:1.5px solid var(--line)}
+.fact .k{flex:none;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--g2);text-transform:uppercase;width:96px;padding-top:2px}
+.fact .v{font-weight:600;font-size:15px}
+.fact .v small{display:block;font-weight:500;color:var(--muted);font-size:13px}
+.layer-toggles{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tog{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
+.tog.off{opacity:.45}
+.tog i{width:12px;height:12px;border-radius:4px}
+.slider-row{display:flex;align-items:center;gap:12px;margin-top:14px;font-size:13px;font-weight:600}
+.slider-row input{flex:1;accent-color:var(--g2)}
+.muscle-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start}
+.mcard{border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff;cursor:pointer;transition:.18s}
+.mcard:hover{border-color:var(--g2)}
+.mcard.on{border-color:var(--ink);box-shadow:0 8px 20px rgba(4,48,43,.1)}
+.mcard h4{font-size:16px;font-weight:800;display:flex;justify-content:space-between;align-items:center}
+.mcard p{font-size:13.5px;color:var(--ink2)}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+
+/* ===== Anamnesis / decisiones ===== */
+.flip{perspective:900px;cursor:pointer;min-height:160px}
+.flip-in{position:relative;width:100%;height:100%;min-height:160px;transition:transform .6s;transform-style:preserve-3d}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.flip-f,.flip-b{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;border:1.5px solid var(--line)}
+.flip-f{background:#fff}
+.flip-b{background:var(--ink);color:#fff;transform:rotateY(180deg);border-color:var(--ink)}
+.flip-f .n{font-size:34px;font-weight:800;color:var(--g)}
+.flip-f h4{font-size:19px;font-weight:800}
+.flip-b p{font-size:14px;color:#d9eee6}
+.flip-b b{color:var(--g)}
+.hint{font-size:11.5px;color:var(--muted);font-weight:600}
+.decision{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch}
+.qbox{grid-column:1/-1;justify-self:center;text-align:center;background:var(--deep);color:#fff;padding:22px 40px;border-radius:24px}
+.qbox h3{font-size:30px;font-weight:800}
+.qbtns{display:flex;gap:12px;justify-content:center;margin-top:14px}
+.qbtn{border:0;border-radius:14px;padding:12px 34px;font-size:18px;font-weight:800}
+.qbtn.si{background:var(--pain);color:#fff}.qbtn.no{background:var(--g);color:var(--deep)}
+.qbtn.dim{opacity:.35}
+.branch{border-radius:22px;padding:20px;border:2px solid var(--line);background:#fff;transition:.3s}
+.branch.off{opacity:.3;filter:grayscale(1)}
+.branch h4{font-size:20px;font-weight:800;margin-bottom:10px}
+.blist{display:flex;flex-direction:column;gap:8px}
+.bitem{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--bg);font-weight:700;font-size:15px;cursor:pointer;transition:.15s;text-align:left;color:var(--ink)}
+.bitem:hover{border-color:var(--ink);transform:translateX(3px)}
+.bitem .b{flex:none;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:800}
+.bitem small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+.goto{margin-left:auto;font-size:12px;color:var(--g2);font-weight:800;white-space:nowrap}
+
+/* fracturas */
+.frx-list{display:flex;flex-direction:column;gap:8px}
+.frx{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;cursor:pointer;background:#fff;transition:.15s}
+.frx:hover,.frx.on{border-color:var(--ink);background:var(--bg)}
+.frx .b{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.rx{position:relative;border-radius:18px;overflow:hidden;background:#000}
+.rx img{width:100%;display:block}
+.rx svg{position:absolute;inset:0;width:100%;height:100%}
+.rx .ov{transition:opacity .4s}
+.rx-btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.draw{stroke-dasharray:600;stroke-dashoffset:600;animation:drawl 1.6s ease forwards}
+@keyframes drawl{to{stroke-dashoffset:0}}
+
+/* marcha */
+.gait-grid{display:grid;grid-template-columns:1fr 330px;gap:22px;align-items:start}
+.gcard{border:1.5px solid var(--line);border-radius:16px;padding:12px 14px;background:#fff;cursor:pointer;transition:.18s;display:flex;gap:12px;align-items:flex-start}
+.gcard:hover{border-color:var(--g2)}
+.gcard.on{border-color:var(--ink);box-shadow:0 8px 20px rgba(4,48,43,.1)}
+.gcard .tag{flex:none;font-size:11px;font-weight:800;padding:4px 8px;border-radius:8px;color:#fff;background:var(--ink)}
+.gcard h4{font-size:15px;font-weight:800}
+.gcard p{font-size:12.5px;color:var(--ink2)}
+
+/* pediatría */
+.age-panel{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.age-scale{position:relative;height:120px;margin-top:10px}
+.howto{background:var(--gl);border:1.5px solid #bfe8cd;border-radius:16px;padding:14px 18px}
+.howto ol{margin:8px 0 0;padding-left:20px;display:grid;grid-template-columns:1fr 1fr;gap:6px 26px;font-size:14px;color:var(--ink2)}
+@media (max-width:760px){.howto ol{grid-template-columns:1fr}}
+.age-bar{position:absolute;height:26px;border-radius:9px;display:flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity .3s,box-shadow .3s}
+.age-bar.dim{opacity:.22}
+.age-bar.hit{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--ink)}
+.age-axis{position:absolute;left:0;right:0;bottom:0;height:20px;font-size:11px;color:var(--muted)}
+.age-axis span{position:absolute;transform:translateX(-50%)}
+.age-cursor{position:absolute;top:-4px;bottom:18px;width:3px;margin-left:-1.5px;background:var(--ink);border-radius:3px;pointer-events:none}
+.age-now{margin-top:8px;font-size:14px;color:var(--ink2)}
+.age-now b{display:inline-block;background:var(--ink);color:#fff;border-radius:8px;padding:2px 10px;font-size:13px}
+.age-wrap{margin-top:10px}
+.age-range{width:100%;margin:0;accent-color:var(--g2);height:22px;cursor:pointer}
+.age-scale{margin:6px 9px 0}
+.switch{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;cursor:pointer;user-select:none}
+.switch i{width:44px;height:24px;border-radius:999px;background:#c9d8d3;position:relative;transition:.2s}
+.switch i::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:.2s}
+.switch.on i{background:var(--pain)}
+.switch.on i::after{left:23px}
+.ped-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.pcard{border:1.5px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;transition:.25s}
+.pcard.hit{border-color:var(--ink);box-shadow:0 12px 26px rgba(4,48,43,.14);transform:translateY(-3px)}
+.pcard.dim{opacity:.45}
+.pcard .ph{padding:12px 14px;color:#fff}
+.pcard .ph h4{font-size:16px;font-weight:800}
+.pcard .ph small{font-size:12px;opacity:.9}
+.pcard svg{width:100%;display:block;background:#f3f8f6}
+.pcard .hipcap{background:#f3f8f6;padding:0 14px 10px;font-size:12px;font-weight:800;line-height:1.3;min-height:36px}
+.pcard ul{margin:0;padding:12px 14px 14px 30px;font-size:13px;color:var(--ink2)}
+.pcard .sris{margin:0 14px 14px;display:inline-block}
+table.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;background:#fff;border:1.5px solid var(--line);border-radius:18px;overflow:hidden}
+table.cmp th{background:var(--ink);color:#fff;text-align:left;padding:12px 14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+table.cmp td{padding:12px 14px;border-top:1.5px solid var(--line)}
+table.cmp tr.hit td{background:var(--gl)}
+.yes{color:var(--pain);font-weight:800}.no{color:var(--g2);font-weight:800}
+
+footer{margin-top:80px;background:var(--deep);color:#cfe4dd;padding:34px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:44px}
+footer small{display:block;color:#93b5ab}
+
+@media (max-width:1050px){
+  .lab{grid-template-columns:1fr}
+  .lab-menu{position:static;flex-direction:row;overflow-x:auto}
+  .menu-group{min-width:240px}
+  .p-body{grid-template-columns:1fr}
+  .stage-wrap{border-right:0;border-bottom:1.5px solid var(--line)}
+  .side{flex-direction:row;flex-wrap:wrap}.side>*{flex:1;min-width:200px}
+  .gait-grid,.muscle-grid,.age-panel{grid-template-columns:1fr}
+  .ped-cards{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .hero-body{grid-template-columns:1fr;padding:30px 0 40px}
+  .grid2,.grid3,.grid4{grid-template-columns:1fr}
+  .decision{grid-template-columns:1fr}
+  .ped-cards{grid-template-columns:1fr}
+  .speed{margin-left:0}
+  .hero-top img.logo{height:48px}.hero-top img.seal{height:34px}
+  .timeline .tl-lbl{font-size:9px}
+}
+
+/* ===== MedON Student ===== */
+.mtop{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid #D3E4DC}
+.mtop .in{max-width:1240px;margin:0 auto;padding:6px 22px;display:flex;align-items:center;gap:16px}
+.mtop a{display:flex;align-items:center;gap:16px;text-decoration:none;color:#04302B;min-width:0}
+.mtop .lg{width:140px;height:54px;overflow:hidden;position:relative;flex-shrink:0}
+.mtop .lg img{position:absolute;width:158px;left:-9px;top:-52px;mix-blend-mode:multiply;max-width:none}
+.mtop .t{display:flex;flex-direction:column;gap:3px;padding-left:14px;border-left:1px solid #D3E4DC;min-width:0}
+.mtop .t b{font-size:15px;font-weight:700;line-height:1.2}
+.mtop .t small{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:#1D8446;font-weight:600}
+.hx-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;padding:48px 0 56px}
+.hx-r{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:16px;display:grid;gap:7px}
+.hx-k{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;color:#3CC168;margin:0 0 4px 2px}
+.hx-i{display:grid;grid-template-columns:32px minmax(0,1fr) 18px;gap:12px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:9px 13px;color:#fff;text-decoration:none;transition:.15s}
+.hx-i:hover{background:rgba(60,193,104,.16);border-color:rgba(60,193,104,.45)}
+.hx-i i{width:30px;height:30px;border-radius:50%;background:#3CC168;color:#04302B;display:grid;place-items:center;font:800 14px Outfit,sans-serif;font-style:normal}
+.hx-i b{display:block;font-size:15.5px;line-height:1.25}
+.hx-i small{display:block;font-size:12.5px;color:#b9d6cd;line-height:1.35;margin-top:1px}
+.hx-i em{font-style:normal;color:#b9d6cd}
+.kicker,.num,.lbl{font-family:'IBM Plex Mono',monospace}
+@media(max-width:640px){table.cmp,table.cmp tbody,table.cmp tr,table.cmp td{display:block;width:100%}table.cmp{border:none;background:transparent;border-radius:0}table.cmp thead{display:none}table.cmp tr{background:#fff;border:1.5px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}table.cmp td{border-top:1px solid var(--line);padding:8px 14px;display:flex;gap:12px;justify-content:space-between;text-align:right}table.cmp td:first-child{border-top:none;background:var(--ink);color:#fff;text-align:left}table.cmp tr.hit td:first-child{background:var(--g2)}table.cmp td:not(:first-child)::before{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;flex:none}table.cmp td:nth-child(2)::before{content:"Edad"}table.cmp td:nth-child(3)::before{content:"SRIS"}table.cmp td:nth-child(4)::before{content:"Inicio"}table.cmp td:nth-child(5)::before{content:"Clave"}}
+.hero::before,.hero::after{display:none!important}
+@media(min-width:900px){.stage-wrap svg{max-height:min(50vh,420px)}
+#player{display:flex;flex-direction:column}
+#player .p-head{order:0;padding:14px 22px 10px}
+#player .p-head h3{font-size:24px}
+#player .p-foot{display:contents}
+#player .controls{order:1;margin:0;padding:10px 22px;border-bottom:1.5px solid var(--line);background:#fbfdfc}
+#player .controls .cbtn{padding:8px 14px}
+#player .timeline{order:2;margin:0;padding:10px 22px 8px}
+#player .prog{order:3;margin:0 22px 10px}
+#player .p-body{order:4;border-top:1.5px solid var(--line)}
+#player .step-card{order:5;padding:14px 22px 18px;border-top:1.5px solid var(--line);min-height:0}
+#player .stage-wrap svg{max-height:clamp(260px,calc(100vh - 400px),420px)}
+}
+footer.mfoot{margin-top:80px;background:#022320;color:#cfe3dc;padding:40px 22px;text-align:center}
+footer.mfoot .ref{font-size:13px;opacity:.88;max-width:92ch;margin:0 auto 14px;line-height:1.65}
+footer.mfoot .ref b{color:#fff}
+@media (max-width:900px){.hx-in{grid-template-columns:minmax(0,1fr);gap:24px;padding:30px 0 36px}}
+@media (max-width:640px){
+  .mtop .in{padding:6px 14px;gap:10px}
+  .mtop .lg{width:104px;height:42px}
+  .mtop .lg img{width:118px;left:-7px;top:-39px}
+  .mtop .t{padding-left:10px}
+  .mtop .t b{font-size:13px}
+  .mtop .t small{font-size:9.5px}
+  nav.top{top:55px}
+  html{scroll-padding-top:120px}
+}
+</style>
+</head>
+<body>
+
+<div class="mtop"><div class="in"><a href="/" title="Volver al inicio de MedON"><div class="lg"><img src="data:image/webp;base64,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ZUlEeCx4bXA6aWlkOjc1YTk5NWRhLTUxOGItNDc0YS05Njg0LWViMTljYzI5OTE3OWxyZWxhdGlvbnNoaXBocGFyZW50T2YAAAHianVtYgAAAEFqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmFjdGlvbnMudjIAAAAAGGMyc2hMIo9lqq9mx/fsS8nfs+mnAAABmWNib3KiZ2FjdGlvbnOComZhY3Rpb25rYzJwYS5vcGVuZWRqcGFyYW1ldGVyc6FraW5ncmVkaWVudHOBomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDWQz5RmTuGmX41GQymIv44K6MkGkJIFT7FgS+rxaPb9KRmYWN0aW9ueB1jb20uYW50aHJvcGljLmNsYXVkZS5wcm92aWRlZGpwYXJhbWV0ZXJzoXgfY29tLmFudGhyb3BpYy5vcmlnaW4tY29uZmlkZW5jZWd1bmtub3dua2Rlc2NyaXB0aW9ueGZDbGF1ZGUgcHJvdmlkZWQgdGhpcyBmaWxlIGF0IHRoZSByZXF1ZXN0IG9mIGEgdXNlciBhbmQgbWF5IGhhdmUgY3JlYXRlZCBvciBtb2RpZmllZCB0aGUgZmlsZSBjb250ZW50cy5tc29mdHdhcmVBZ2VudKFkbmFtZWZDbGF1ZGVyYWxsQWN0aW9uc0luY2x1ZGVk9QAAAMhqdW1iAAAAQGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaGFzaC5kYXRhAAAAABhjMnNoj6qbBcWQ0iILJyjhqFS5CwAAAIBjYm9ypWNhbGdmc2hhMjU2Y3BhZEwAAAAAAAAAAAAAAABkaGFzaFggfe2JEN1TlJJd+ri+enTuqI9Xi0dqdIDjnQCmzm9WEQ1kbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQZM5xmbGVuZ3RoGRaHAAACPmp1bWIAAAAnanVtZGMyY2wAEQAQgAAAqgA4m3EDYzJwYS5jbGFpbS52MgAAAAIPY2JvcqVjYWxnZnNoYTI1NmlzaWduYXR1cmV4TXNlbGYjanVtYmY9L2MycGEvdXJuOmMycGE6OThjYzI4OGYtN2MyZC00MjllLWIzMGUtYjJlMzA0MmIzODhjL2MycGEu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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9lhA2jMsuWKh5Jz64XBcNcH7bCv+orl1SLeFiBfCGVdT6QmlKHjQz/ur5D5GM5nlgbrjBbqP6V9/KEz83oD1Kty4OgA=" alt="MedON"></div><div class="t"><b>Semiología osteoarticular · Cadera y pelvis</b><small>STUDENT · SEMIOLOGÍA</small></div></a></div></div>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hx-in">
+      <div>
+        <span class="kicker">Semiología osteoarticular · Semiotecnia</span>
+        <h1>Cadera <span>y pelvis</span></h1>
+        <p class="lead">Anatomía, anamnesis, trauma y maniobras de exploración en movimiento. Cada maniobra se ejecuta paso a paso: primero la hace el paciente solo y después la guía el examinador, con el momento exacto en que aparece el dolor.</p>
+        <div class="legend-chips">
+          <span class="chip"><i class="dot" style="background:var(--g)"></i>Fase activa · paciente</span>
+          <span class="chip"><i class="dot" style="background:#6ea2ff"></i>Fase guiada · examinador</span>
+          <span class="chip"><i class="dot" style="background:#ffb020"></i>Inspección en trauma</span>
+          <span class="chip"><i class="dot" style="background:var(--pain)"></i>Dolor (EVA 0–10)</span>
+        </div>
+      </div>
+      <div class="hx-r"><div class="hx-k">ORDEN DEL EXAMEN</div>
+        <a class="hx-i" href="#anatomia"><i>1</i><span><b>Anatomía</b><small>Pelvis y articulación coxofemoral</small></span><em>→</em></a>
+        <a class="hx-i" href="#musculos"><i>2</i><span><b>Músculos</b><small>Cadera en acción</small></span><em>→</em></a>
+        <a class="hx-i" href="#pinzamiento"><i>3</i><span><b>Pinzamiento</b><small>Femoroacetabular</small></span><em>→</em></a>
+        <a class="hx-i" href="#anamnesis"><i>4</i><span><b>Anamnesis</b><small>Motivo de consulta: dolor en cadera</small></span><em>→</em></a>
+        <a class="hx-i" href="#trauma"><i>5</i><span><b>Trauma</b><small>¿El dolor está asociado a trauma?</small></span><em>→</em></a>
+        <a class="hx-i" href="#maniobras"><i>6</i><span><b>Maniobras</b><small>Paso a paso, con el momento del dolor</small></span><em>→</em></a>
+        <a class="hx-i" href="#marcha"><i>7</i><span><b>Marcha</b><small>¿Cuáles producen cojera?</small></span><em>→</em></a>
+        <a class="hx-i" href="#pediatria"><i>8</i><span><b>Pediatría</b><small>Enfoque de cojera en niños</small></span><em>→</em></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="#anatomia">Anatomía</a>
+    <a href="#musculos">Músculos</a>
+    <a href="#pinzamiento">Pinzamiento</a>
+    <a href="#anamnesis">Anamnesis</a>
+    <a href="#trauma">Trauma</a>
+    <a href="#maniobras">Maniobras</a>
+    <a href="#marcha">Marcha</a>
+    <a href="#pediatria">Pediatría</a>
+  </div>
+</nav>
+
+<main>
+<!-- ============ ANATOMÍA ============ -->
+<section class="sec" id="anatomia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">01 · Anatomía</span><h2>Pelvis y articulación coxofemoral</h2></div>
+      <p>Toque cada hueso para identificarlo. Use “Formar el acetábulo” para ver cómo ilion, isquion y pubis se unen en la cavidad articular.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <span class="lbl">Pelvis · vista anterior</span>
+          <div class="tabs sub-tabs"><button class="tab" id="btnFuse">Formar el acetábulo</button><button class="tab" id="btnLabels">Etiquetas</button></div>
+        </div>
+        <svg class="anat-svg" id="pelvisSvg" viewBox="0 0 600 420"></svg>
+        <div class="info" id="pelvisInfo"><h4>Hueso coxal</h4><p class="muted">Ilion + isquion + pubis, que se unen en el acetábulo. Por detrás, sacro y cóccix. Articulaciones: sacroilíaca y sínfisis del pubis.</p></div>
+      </div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <span class="lbl">Corte coronal · cadera derecha</span>
+          <div class="tabs sub-tabs"><button class="tab" id="btnSwing">Mover la cadera</button></div>
+        </div>
+        <svg class="anat-svg" id="hipSvg" viewBox="0 0 600 440"></svg>
+        <div class="layer-toggles" id="hipLayers"></div>
+        <div class="slider-row"><span>Aducción</span><input type="range" id="hipAng" min="-20" max="40" value="0"><span>Abducción</span></div>
+        <div class="facts" style="margin-top:16px">
+          <div class="fact"><span class="k">Tipo</span><span class="v">Enartrosis<small>esférica · muy estable</small></span></div>
+          <div class="fact"><span class="k">Superficies</span><span class="v">Cabeza femoral + acetábulo</span></div>
+          <div class="fact"><span class="k">Labrum</span><span class="v">Profundiza el acetábulo</span></div>
+          <div class="fact"><span class="k">Cápsula</span><span class="v">Del reborde acetabular al cuello femoral</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÚSCULOS ============ -->
+<section class="sec" id="musculos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">02 · Anatomía funcional</span><h2>Músculos de la cadera en acción</h2></div>
+      <p>Elija un grupo: el paciente realiza el movimiento y se iluminan los músculos que lo producen. Arrastre la figura para girarla.</p>
+    </div>
+    <div class="muscle-grid">
+      <div class="player" style="border-radius:24px">
+        <div class="stage-wrap" style="border-right:0">
+          <svg id="musSvg"></svg>
+          <div class="phase-badge ph-act" id="musBadge"><span class="ic"><svg class="i" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></span><span id="musBadgeTxt">Flexión de cadera</span></div>
+          <div class="drag-hint">Arrastre para girar</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px" id="musList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PINZAMIENTO ============ -->
+<section class="sec" id="pinzamiento">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">03 · Cadera · corte coronal</span><h2>Pinzamiento femoroacetabular</h2></div>
+      <p>Elija el tipo y pulse “Flexión + rotación interna”: observe dónde choca el cuello femoral con el reborde del acetábulo y cuándo aparece el dolor.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="tabs" id="faiTabs"></div>
+        <svg class="anat-svg" id="faiSvg" viewBox="0 0 600 420" style="margin-top:10px"></svg>
+        <div class="controls"><button class="cbtn primary" id="faiPlay"><svg class="i" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Flexión + rotación interna</button><span class="muted" style="font-size:13px" id="faiMsg"></span></div>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="k">Referencia</span><span class="v">Normal<small>cabeza esférica · cobertura adecuada</small></span></div>
+        <div class="fact"><span class="k">Femoral</span><span class="v">CAM<small>giba en la unión cabeza-cuello</small></span></div>
+        <div class="fact"><span class="k">Acetabular</span><span class="v">PINCER<small>sobrecobertura del acetábulo</small></span></div>
+        <div class="fact" style="background:var(--painl);border-color:#f6c3c5"><span class="k" style="color:var(--pain)">Clínica</span><span class="v">Dolor inguinal en jóvenes activos<small>aumenta con flexión + rotación interna</small></span></div>
+        <div class="fact" style="background:var(--exal);border-color:#c9dbfb"><span class="k" style="color:var(--exa)">Maniobra</span><span class="v">FADIR (+)<small>flexión · aducción · rotación interna</small></span></div>
+        <button class="bitem" data-goto="fadir"><span class="b" style="background:var(--exa)"><svg class="i" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></span><span>Ver la maniobra FADIR paso a paso<small>activa y guiada, con el momento del dolor</small></span><span class="goto">Ir <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANAMNESIS ============ -->
+<section class="sec" id="anamnesis">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">04 · Anamnesis</span><h2>Motivo de consulta: dolor en cadera</h2></div>
+      <p>Toque cada tarjeta para ver qué preguntar. Al final, la pregunta obligada decide el camino del examen físico.</p>
+    </div>
+    <div class="grid3" id="anamCards"></div>
+    <div class="grid2" style="margin-top:22px">
+      <div class="card">
+        <span class="lbl">Síntomas concomitantes</span>
+        <div class="grid2" style="margin-top:12px;gap:12px">
+          <div class="fact"><span class="k">Sensibilidad</span><span class="v">Parestesias<small>orientan a compromiso radicular o neural</small></span></div>
+          <div class="fact"><span class="k">Fuerza</span><span class="v">Debilidad<small>dolor que limita vs. déficit motor real</small></span></div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="lbl">Antecedentes</span>
+        <div class="grid2" style="margin-top:12px;gap:12px">
+          <div class="fact"><span class="k">Patológicos</span><span class="v">Osteoartrosis · Artritis reumatoide (AR)<small>degenerativo · autoinmunidad</small></span></div>
+          <div class="fact"><span class="k">Quirúrgicos</span><span class="v">¿Cirugías de cadera previas?<small>¿Reemplazo de cadera?</small></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRAUMA ============ -->
+<section class="sec" id="trauma">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">05 · Pregunta obligada</span><h2>¿El dolor está asociado a trauma?</h2></div>
+      <p>Responda para abrir el camino. Cada entidad lleva a su inspección o maniobra animada.</p>
+    </div>
+    <div class="decision">
+      <div class="qbox"><h3>¿Asociada a trauma?</h3><div class="qbtns"><button class="qbtn si" data-q="si">SÍ</button><button class="qbtn no" data-q="no">NO</button></div></div>
+      <div class="branch" id="brSi">
+        <h4 style="color:var(--pain)">Trauma: SÍ · pensar en</h4>
+        <div class="blist">
+          <button class="bitem" data-goto="luxpost"><span class="b" style="background:var(--pain)">1</span><span>Luxación de cadera<small>90 % posterior · bañista sorprendida</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="cerrado"><span class="b" style="background:var(--pain)">2</span><span>Fractura de pelvis<small>libro cerrado · libro abierto</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="fx"><span class="b" style="background:var(--pain)">3</span><span>Fractura de cadera<small>acortamiento + rotación externa</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        </div>
+      </div>
+      <div style="display:grid;place-items:center;color:var(--muted);font-weight:800">o</div>
+      <div class="branch" id="brNo">
+        <h4 style="color:var(--g2)">Trauma: NO · maniobras</h4>
+        <div class="blist">
+          <button class="bitem" data-goto="faber"><span class="b" style="background:var(--g2)">1</span><span>FABER · Patrick<small>dónde aparece el dolor</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="thomas"><span class="b" style="background:var(--g2)">2</span><span>Thomas<small>déficit de extensión</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="ober"><span class="b" style="background:var(--g2)">3</span><span>Ober<small>restricción de la aducción</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="fadir"><span class="b" style="background:var(--g2)">4</span><span>FADIR<small>dolor inguinal intraarticular</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="trend"><span class="b" style="background:var(--g2)">5</span><span>Trendelenburg<small>debilidad del glúteo medio</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fractura de cadera -->
+    <div class="grid2" style="margin-top:40px">
+      <div class="card">
+        <span class="lbl">Fractura de cadera · clasificación</span>
+        <h3 style="font-size:26px;font-weight:800;margin:6px 0 12px">¿Dentro o fuera de la cápsula?</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
+          <svg class="anat-svg" id="femurSvg" viewBox="0 0 300 400"></svg>
+          <div class="frx-list" id="frxList"></div>
+        </div>
+        <div class="fact" style="margin-top:14px;background:var(--painl);border-color:#f6c3c5"><span class="k" style="color:var(--pain)">Clínica</span><span class="v">Miembro acortado y en rotación externa<small>adulto mayor · caída de su propia altura</small></span></div>
+      </div>
+      <div class="card">
+        <span class="lbl">Esquema radiológico · fractura pertrocantérica (la más común)</span>
+        <div class="rx" style="margin-top:10px"><svg viewBox="0 0 402 335" id="rxPertroBase" style="position:static;display:block;width:100%;height:auto"></svg><svg viewBox="0 0 402 335" id="rxPertroOv"></svg></div>
+        <div class="rx-btns"><button class="tab on" data-rx="trazo">Trazo</button><button class="tab" data-rx="asc">Desplazamiento</button><button class="tab" data-rx="none">Sin marcas</button></div>
+        <div class="facts" style="margin-top:12px">
+          <div class="fact"><span class="k">Trazo</span><span class="v">Entre ambos trocánteres<small>del trocánter mayor al menor · extracapsular</small></span></div>
+          <div class="fact"><span class="k">Estudio</span><span class="v">Rx AP de pelvis + AP y axial de cadera<small>comparar siempre con el lado sano</small></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxación y pelvis: esquemas -->
+    <div class="grid2" style="margin-top:22px">
+      <div class="card">
+        <span class="lbl">Luxación posterior · esquema de Rx AP de pelvis</span>
+        <div class="rx" style="margin-top:10px"><svg viewBox="0 0 402 335" id="rxLux" style="position:static;display:block;width:100%;height:auto"></svg></div>
+        <p class="muted" style="font-size:13.5px;margin-top:8px">Cabeza femoral fuera del acetábulo, desplazada hacia arriba. Clínica: bañista sorprendida (acortamiento, aducción y rotación interna).</p>
+      </div>
+      <div class="card">
+        <span class="lbl">Fractura de pelvis · esquema de Rx AP de pelvis</span>
+        <div class="rx" style="margin-top:10px"><svg viewBox="0 0 402 335" id="rxPelvis" style="position:static;display:block;width:100%;height:auto"></svg></div>
+        <p class="muted" style="font-size:13.5px;margin-top:8px">Buscar ruptura del anillo pélvico y comparar ambos lados. Trauma de alto impacto: riesgo de lesión de grandes vasos y choque hemorrágico; estabilizar o fajar la pelvis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIOBRAS ============ -->
+<section class="sec" id="maniobras">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">06 · Laboratorio de maniobras</span><h2>Paso a paso, con el momento del dolor</h2></div>
+      <p>Las maniobras de cadera comienzan en fase activa (el paciente las hace solo) y continúan en fase guiada (el examinador moviliza y fija). Cambie el resultado entre normal y positivo para comparar.</p>
+    </div>
+    <div class="lab">
+      <aside class="lab-menu" id="labMenu"></aside>
+      <div class="player" id="player">
+        <div class="p-head">
+          <div><h3 id="pTitle"></h3><div class="sub" id="pSub"></div></div>
+          <div class="variants" id="pVariants"></div>
+        </div>
+        <div class="p-body">
+          <div class="stage-wrap">
+            <svg id="labSvg"></svg>
+            <div class="phase-badge ph-act" id="pBadge"><span class="ic" id="pBadgeIc"></span><span><span id="pBadgeT"></span><small id="pBadgeS"></small></span></div>
+            <div class="cam-ctrl"><button data-cam="def">Vista inicial</button><button data-cam="top">Superior</button><button data-cam="side">Lateral</button></div>
+            <div class="drag-hint">Arrastre para girar la escena</div>
+          </div>
+          <div class="side">
+            <div class="eva">
+              <div class="eva-top"><div><span class="lbl" style="color:var(--pain)">Dolor · EVA</span><div class="eva-val" id="evaVal">0</div></div><svg class="eva-face" id="evaFace" viewBox="0 0 44 44"></svg></div>
+              <div class="eva-bar"><span class="eva-knob" id="evaKnob" style="left:0%"></span></div>
+              <div class="eva-where" id="evaWhere">Sin dolor</div>
+            </div>
+            <div class="who">
+              <span class="lbl">Leyenda</span>
+              <div><i class="dot" style="background:var(--g2)"></i>Fase activa · lo hace el paciente</div>
+              <div><i class="dot" style="background:var(--exa)"></i>Fase guiada · manos del examinador</div>
+              <div><i class="dot" style="background:var(--ins)"></i>Inspección · solo observar</div>
+              <div><i class="dot" style="background:#b42318"></i>Signo en trauma · sin fases</div>
+              <div><i class="dot" style="background:var(--pain)"></i>Punto donde duele</div>
+            </div>
+            <div class="result" id="pResult"></div>
+          </div>
+        </div>
+        <div class="p-foot">
+          <div class="timeline" id="pTimeline"></div>
+          <div class="step-card"><div class="step-n" id="sN">1</div><div><div class="who-txt" id="sWho"></div><h4 id="sT"></h4><p id="sD"></p></div></div>
+          <div class="prog"><i id="pProg"></i></div>
+          <div class="controls">
+            <button class="cbtn" id="bPrev"><svg viewBox="0 0 16 16"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Anterior</button>
+            <button class="cbtn primary" id="bPlay"><svg viewBox="0 0 16 16" id="playIc"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg><span id="playTxt">Reproducir todo</span></button>
+            <button class="cbtn" id="bNext">Siguiente<svg viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="cbtn" id="bRe"><svg class="i" viewBox="0 0 16 16"><path d="M3 8a5 5 0 1 0 1.5-3.5M3 2.5v3h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Reiniciar</button>
+            <label class="speed">Velocidad <input type="range" id="speed" min="0.5" max="1.8" step="0.1" value="1"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARCHA ============ -->
+<section class="sec" id="marcha">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">07 · Cadera · marcha</span><h2>¿Cuáles producen cojera?</h2></div>
+      <p>Cada maniobra positiva se traduce en un patrón de marcha. Elija uno y observe el ciclo; el destello rojo marca la fase dolorosa.</p>
+    </div>
+    <div class="gait-grid">
+      <div class="player">
+        <div class="stage-wrap" style="border-right:0">
+          <svg id="gaitSvg"></svg>
+          <div class="phase-badge ph-act" id="gaitBadge"><span class="ic"><svg class="i" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="currentColor"/></svg></span><span><span id="gaitBadgeT">Marcha normal</span><small id="gaitBadgeS"></small></span></div>
+          <div class="cam-ctrl"><button data-gcam="back">Posterior</button><button data-gcam="side">Lateral</button><button data-gcam="front">Anterior</button></div>
+          <div class="drag-hint">Arrastre para girar</div>
+        </div>
+        <div style="padding:14px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-top:1.5px solid var(--line)">
+          <button class="cbtn" id="gPause">Pausa</button>
+          <label class="speed" style="margin-left:0">Velocidad <input type="range" id="gSpeed" min="0.3" max="1.5" step="0.1" value="0.8"></label>
+          <span class="muted" style="font-size:13px" id="gPhase"></span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px" id="gaitList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PEDIATRÍA ============ -->
+<section class="sec" id="pediatria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num">08 · Pediatría · cadera</span><h2>Enfoque de cojera en niños</h2></div>
+      <p>Desliza la barra de edad para activar los síndromes y usa los interruptores para añadir SRIS u obesidad.</p>
+    </div>
+    <div class="card age-panel">
+      <div class="howto" style="grid-column:1/-1">
+        <span class="lbl">Cómo usar esta herramienta</span>
+        <ol>
+          <li><b>Desliza la barra de edad</b> para activar los síndromes típicos de esa edad: se iluminan en la escala, en las tarjetas y en el cuadro comparativo.</li>
+          <li><b>Activa SRIS</b> si el niño tiene fiebre, mal estado general o no apoya: se suma la artritis séptica como urgencia, a cualquier edad.</li>
+          <li><b>Activa “Adolescente con obesidad”</b> si hay dolor de rodilla o muslo en un adolescente: resalta la epifisiólisis.</li>
+          <li>Lee la orientación en el recuadro de la derecha. La edad siempre sigue activando sus síndromes, con o sin interruptores.</li>
+        </ol>
+      </div>
+      <div>
+        <span class="lbl">Edad del niño · desliza para activar los síndromes</span>
+        <div class="age-now">Edad seleccionada: <b id="ageVal">5 años</b></div>
+        <div class="age-wrap"><input type="range" id="age" class="age-range" min="0" max="16" step="0.5" value="5" aria-label="Edad del niño en años"></div>
+        <div class="age-scale" id="ageScale"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+        <label class="switch" id="srisSw"><i></i>SRIS · fiebre, mal estado general, no apoya</label>
+        <label class="switch" id="obeSw"><i></i>Adolescente con obesidad · dolor de rodilla</label>
+        <div class="info" id="ageOut"></div>
+      </div>
+    </div>
+    <div class="ped-cards" id="pedCards"></div>
+    <div class="grid2" style="margin-top:22px">
+      <div class="card">
+        <span class="lbl">Legg-Calvé-Perthes · necrosis avascular</span>
+        <svg class="anat-svg" id="perthesSvg" viewBox="0 0 600 300" style="margin-top:8px"></svg>
+        <div class="controls"><button class="cbtn primary" id="perthesBtn"><svg class="i" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Ver mecanismo</button><span class="muted" style="font-size:13px" id="perthesMsg">Normal: ligamento libre en el espacio articular.</span></div>
+      </div>
+      <div class="card">
+        <span class="lbl">Epifisiólisis · signo de Drehmann</span>
+        <p style="margin:8px 0 12px;font-size:15px">Al flexionar la cadera, el muslo se va obligatoriamente a rotación externa. Véalo primero como movimiento activo del adolescente y luego guiado por el examinador.</p>
+        <button class="bitem" data-goto="drehmann"><span class="b" style="background:var(--g2)"><svg class="i" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></span><span>Signo de Drehmann paso a paso<small>activo y luego guiado · dolor referido a rodilla</small></span><span class="goto">Ir <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+    </div>
+    <h3 style="font-size:24px;font-weight:800;margin:34px 0 14px">Cuadro comparativo</h3>
+    <table class="cmp" id="cmpTable">
+      <thead><tr><th>Entidad</th><th>Edad</th><th>SRIS</th><th>Inicio</th><th>Clave</th></tr></thead>
+      <tbody>
+        <tr data-e="sa"><td><b>Artritis séptica</b></td><td>&lt; 3 años</td><td class="yes">SÍ</td><td>Agudo</td><td>Fiebre · no apoya · urgencia</td></tr>
+        <tr data-e="st"><td><b>Sinovitis transitoria</b></td><td>3 – 8 años</td><td class="no">NO</td><td>Agudo</td><td>Viral previa · autolimitada</td></tr>
+        <tr data-e="lcp"><td><b>Legg-Calvé-Perthes</b></td><td>4 – 8 años</td><td class="no">NO</td><td>Insidioso</td><td>Necrosis avascular · varones</td></tr>
+        <tr data-e="epi"><td><b>Epifisiólisis</b></td><td>10 – 16 años</td><td class="no">NO</td><td>Insidioso o agudo</td><td>Adolescente obeso · Drehmann</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer class="mfoot">
+  <p style="font-size:15px;max-width:900px;margin:0 auto 12px;line-height:1.6;color:#D7E7E1">Herramienta de apoyo educativo para estudiantes y profesionales de la salud. Modelos y esquemas simplificados con fines docentes; no sustituye la supervisión clínica ni el juicio médico.</p>
+  <p class="ref">Bickley LS. Bates. Guía de exploración física e historia clínica, 13.ª ed. Wolters Kluwer; 2021 · Argente HA, Álvarez ME. Semiología médica, 3.ª ed. Panamericana; 2021 · Hoppenfeld S. Exploración física de la columna vertebral y las extremidades. Manual Moderno · Magee DJ, Manske RC. Orthopedic Physical Assessment, 7.ª ed. Elsevier; 2021 · Moore KL, Dalley AF, Agur AMR. Anatomía con orientación clínica, 9.ª ed. Wolters Kluwer; 2022 · Netter FH. Atlas de anatomía humana, 8.ª ed. Elsevier; 2023 · Neumann DA. Kinesiology of the Musculoskeletal System, 3.ª ed. Elsevier; 2017 · Reiman MP, Thorborg K. Clinical examination and physical assessment of hip joint-related pain in athletes. Int J Sports Phys Ther 2014;9:737-55 · Reiman MP, Goode AP, Cook CE, Hölmich P, Thorborg K. Diagnostic accuracy of clinical tests for the diagnosis of hip femoroacetabular impingement/labral tear: a systematic review with meta-analysis. Br J Sports Med 2015;49:811 · Griffin DR, Dickenson EJ, O’Donnell J, et al. The Warwick Agreement on femoroacetabular impingement syndrome (FAI syndrome): an international consensus statement. Br J Sports Med 2016;50:1169-76 · Grimaldi A, Fearon A. Gluteal tendinopathy: integrating pathomechanics and clinical features in its management. J Orthop Sports Phys Ther 2015;45:910-22 · American College of Surgeons. ATLS: Advanced Trauma Life Support, 10.ª ed. 2018 · Burgess AR, Eastridge BJ, Young JW, et al. Pelvic ring disruptions: effective classification system and treatment protocols. J Trauma 1990;30:848-56 · AAOS. Management of Hip Fractures in Older Adults: Evidence-Based Clinical Practice Guideline, 2021 · Tornetta P, Ricci WM, et al. Rockwood and Green’s Fractures in Adults, 9.ª ed. Wolters Kluwer; 2019 · Perry J, Burnfield JM. Gait Analysis: Normal and Pathological Function, 2.ª ed. SLACK; 2010 · Kocher MS, Zurakowski D, Kasser JR. Differentiating between septic arthritis and transient synovitis of the hip in children: an evidence-based clinical prediction algorithm. J Bone Joint Surg Am 1999;81:1662-70 · Caird MS, Flynn JM, Leung YL, et al. Factors distinguishing septic arthritis from transient synovitis of the hip in children: a prospective study. J Bone Joint Surg Am 2006;88:1251-7 · Herring JA. Tachdjian’s Pediatric Orthopaedics, 6.ª ed. Elsevier; 2021.</p>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;opacity:.85;margin:0">© 2026 MedON · Medicina interactiva · Todos los derechos reservados.</p>
+</footer>
+
+<script>
+/* ===== Motor del paciente articulado (pseudo-3D, proyección ortográfica) ===== */
+const D2R = Math.PI / 180;
+const add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+const mul = (a, s) => [a[0] * s, a[1] * s, a[2] * s];
+const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const vlen = a => Math.hypot(a[0], a[1], a[2]);
+const norm = a => { const l = vlen(a) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
+const lerpV = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+function mm(A, B) { const C = new Array(9); for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) C[i * 3 + j] = A[i * 3] * B[j] + A[i * 3 + 1] * B[3 + j] + A[i * 3 + 2] * B[6 + j]; return C; }
+const mv = (M, v) => [M[0] * v[0] + M[1] * v[1] + M[2] * v[2], M[3] * v[0] + M[4] * v[1] + M[5] * v[2], M[6] * v[0] + M[7] * v[1] + M[8] * v[2]];
+function Rx(a) { a *= D2R; const c = Math.cos(a), s = Math.sin(a); return [1, 0, 0, 0, c, -s, 0, s, c]; }
+function Ry(a) { a *= D2R; const c = Math.cos(a), s = Math.sin(a); return [c, 0, s, 0, 1, 0, -s, 0, c]; }
+function Rz(a) { a *= D2R; const c = Math.cos(a), s = Math.sin(a); return [c, -s, 0, s, c, 0, 0, 0, 1]; }
+const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+const LEG0 = { flex: 0, abd: 0, rot: 0, knee: 0, sh: 0 };
+const ARM0 = { flex: 0, abd: 8, elb: 0, ik: 0 };
+function basePose() {
+  return { R: { ...LEG0 }, L: { ...LEG0 }, pt: 0, pp: 0, tl: 0, tf: 0, aR: { ...ARM0 }, aL: { ...ARM0 }, tR: 'kneeR', tL: 'kneeR', head: 0, cmp: 0 };
+}
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function deepMerge(a, b) {
+  if (!b) return a;
+  for (const k in b) {
+    if (b[k] && typeof b[k] === 'object' && !Array.isArray(b[k]) && a[k] && typeof a[k] === 'object') deepMerge(a[k], b[k]);
+    else a[k] = b[k];
+  }
+  return a;
+}
+function lerpPose(a, b, t) {
+  if (typeof a === 'number' && typeof b === 'number') return a + (b - a) * t;
+  if (a && typeof a === 'object') { const o = {}; for (const k in b) o[k] = (k in a) ? lerpPose(a[k], b[k], t) : b[k]; return o; }
+  return t < .5 ? a : b;
+}
+
+/* Esqueleto en marco corporal: x = izquierda del paciente, y = craneal, z = anterior */
+const L_TH = 44, L_SH = 41, L_UA = 29, L_FA = 27;
+function skeleton(p) {
+  const S = {};
+  const P = mm(Rz(p.pt), Rx(-p.pp));
+  S.pelvis = [0, 0, 0];
+  S.pubis = mv(P, [0, -5, 9]);
+  S.sacrum = mv(P, [0, 6, -10]);
+  S.lumbar = mv(P, [0, 16, -9]);
+  for (const side of ['R', 'L']) {
+    const s = side === 'L' ? 1 : -1, l = p[side];
+    const hip = mv(P, [s * 9, l.sh || 0, 0]);
+    const abdE = l.abd + (p.cmp || 0) * (side === 'R' ? p.pt : -p.pt);
+    const M = mm(P, mm(Rx(-l.flex), mm(Rz(s * abdE), Ry(-s * l.rot))));
+    const td = mv(M, [0, -1, 0]), lat = mv(M, [s, 0, 0]), ant = mv(M, [0, 0, 1]);
+    const knee = add(hip, mul(td, L_TH));
+    const K = mm(M, Rx(l.knee));
+    const sd = mv(K, [0, -1, 0]), fd = mv(K, [0, 0, 1]);
+    const ankle = add(knee, mul(sd, L_SH));
+    S['hip' + side] = hip; S['knee' + side] = knee; S['ankle' + side] = ankle;
+    S['heel' + side] = add(ankle, add(mul(fd, -5), mul(sd, 3)));
+    S['toe' + side] = add(add(ankle, mul(fd, 17)), mul(sd, 4));
+    S['td' + side] = td; S['lat' + side] = lat; S['ant' + side] = ant; S['sd' + side] = sd;
+    S['troch' + side] = add(hip, add(mul(lat, 9), mul(td, 5)));
+    S['lesser' + side] = add(hip, add(mul(lat, -3), mul(td, 9)));
+    S['thighMid' + side] = add(hip, mul(td, L_TH * .5));
+    S['thighLat' + side] = add(add(hip, mul(td, L_TH * .55)), mul(lat, 7));
+    S['thighMed' + side] = add(add(hip, mul(td, L_TH * .6)), mul(lat, -6));
+    S['kneeAnt' + side] = add(knee, mul(ant, 6));
+    S['kneeMed' + side] = add(knee, mul(lat, -5));
+    S['kneeLat' + side] = add(knee, mul(lat, 6));
+    S['kneePost' + side] = add(add(knee, mul(ant, -5)), mul(td, -3));
+    S['ischium' + side] = mv(P, [s * 6, -6, -7]);
+    S['shin' + side] = add(add(knee, mul(sd, L_SH * .55)), mul(mv(K, [0, 0, 1]), 5));
+    S['glutTub' + side] = add(add(hip, mul(td, 12)), add(mul(lat, 5), mul(ant, -5)));
+    S['asis' + side] = mv(P, [s * 12, 9, 8]);
+    S['crest' + side] = mv(P, [s * 15, 15, -1]);
+    S['crestPost' + side] = mv(P, [s * 9, 13, -8]);
+    S['groin' + side] = mv(P, [s * 8, -3, 9]);
+    S['si' + side] = mv(P, [s * 5, 8, -10]);
+    S['glut' + side] = mv(P, [s * 11, 2, -9]);
+    S['flank' + side] = mv(P, [s * 15, 6, 0]);
+    S['pelH' + side] = mv(P, [s * 7, -1, -3]);
+    S['gmed' + side] = mv(P, [s * 14, 0, -3]);
+  }
+  // tronco: independiente de la pelvis (permite que la pelvis caiga sin balancear el tronco)
+  const T = mm(Rz(p.tl), Rx(p.tf));
+  const sb = mv(P, [0, 5, 0]);
+  S.spineBase = sb;
+  S.chest = add(sb, mv(T, [0, 32, 0]));
+  S.neck = add(sb, mv(T, [0, 50, 0]));
+  S.head = add(sb, mv(T, [0, 62, 1]));
+  S.belly = add(sb, mv(T, [0, 14, 8]));
+  for (const side of ['R', 'L']) {
+    const s = side === 'L' ? 1 : -1, a = p['a' + side];
+    const sh = add(sb, mv(T, [s * 18, 45, 0]));
+    const A = mm(T, mm(Rx(-a.flex), Rz(s * a.abd)));
+    let elbow = add(sh, mul(mv(A, [0, -1, 0]), L_UA));
+    const E = mm(A, Rx(-a.elb));
+    let hand = add(elbow, mul(mv(E, [0, -1, 0]), L_FA));
+    S['sh' + side] = sh;
+    if (a.ik > 0) {
+      const tgtName = p['t' + side];
+      S._pendingIK = S._pendingIK || [];
+      S._pendingIK.push({ side, s, sh, hand, ik: a.ik, tgtName, T });
+    }
+    S['elbow' + side] = elbow; S['hand' + side] = hand;
+  }
+  if (S._pendingIK) {
+    for (const q of S._pendingIK) {
+      let tgt = S[q.tgtName] || q.hand;
+      tgt = add(tgt, mul(norm(sub(q.sh, tgt)), 2));
+      const target = lerpV(q.hand, tgt, q.ik);
+      const r = ik2(q.sh, target, L_UA, L_FA, mv(q.T, [q.s * .7, -.4, -.6]));
+      S['elbow' + q.side] = r.e; S['hand' + q.side] = r.h;
+    }
+    delete S._pendingIK;
+  }
+  return S;
+}
+function ik2(S, T, a, b, pole) {
+  const v = sub(T, S); let d = vlen(v);
+  d = Math.max(Math.abs(a - b) + .01, Math.min(a + b - .01, d));
+  const dir = norm(v);
+  const x = (a * a - b * b + d * d) / (2 * d), h = Math.sqrt(Math.max(0, a * a - x * x));
+  let pv = sub(pole, mul(dir, dot(pole, dir))); pv = norm(pv);
+  return { e: add(add(S, mul(dir, x)), mul(pv, h)), h: add(S, mul(dir, d)) };
+}
+
+/* Posturas: matriz cuerpo → mundo (X derecha, Y arriba, Z hacia el observador) */
+const POSTURES = {
+  supine: { M: [0, -1, 0, 0, 0, 1, -1, 0, 0], off: [12, 10, 0], table: true },
+  lateral: { M: [0, -1, 0, -1, 0, 0, 0, 0, -1], off: [12, 17, 0], table: true },
+  standing: { M: [1, 0, 0, 0, 1, 0, 0, 0, 1], off: [0, 0, 0], floor: true }
+};
+
+const COL = {
+  skin: '#eab896', skinD: '#d39d78', skinO: '#8e5d40',
+  shorts: '#1d6b57', shortsD: '#145244', shortsO: '#0b3b36',
+  shirt: '#f4f8f6', shirtD: '#dde8e3', shirtO: '#7c9c92',
+  hair: '#3b2a20',
+  glove: '#2f6fd6', gloveO: '#163f86', sleeve: '#e6eefb', sleeveO: '#7f97c1',
+  pain: '#e5484d', exa: '#2f6fd6', act: '#1fae55'
+};
+
+class Stage {
+  constructor(svg, opt = {}) {
+    this.svg = svg; this.W = opt.W || 800; this.H = opt.H || 480;
+    svg.setAttribute('viewBox', `0 0 ${this.W} ${this.H}`);
+    this.yaw = -20; this.pitch = 30; this.k = 2.6; this.cx = this.W / 2; this.cy = this.H / 2;
+    this.target = [0, 0, 0]; this.posture = 'supine';
+    this.g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    svg.innerHTML = `<defs>
+      <radialGradient id="pg_${opt.id || 'x'}"><stop offset="0" stop-color="#ff2d2d" stop-opacity=".95"/><stop offset=".45" stop-color="#ff4d4d" stop-opacity=".55"/><stop offset="1" stop-color="#ff4d4d" stop-opacity="0"/></radialGradient>
+      <marker id="ah_${opt.id || 'x'}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+      <filter id="glow_${opt.id || 'x'}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+    </defs>`;
+    this.id = opt.id || 'x';
+    svg.appendChild(this.g);
+    this.state = null; this.onDrag = null;
+    this._drag();
+  }
+  _drag() {
+    let st = null;
+    const pt = e => { const r = this.svg.getBoundingClientRect(); const t = e.touches ? e.touches[0] : e; return [t.clientX - r.left, t.clientY - r.top]; };
+    const down = e => { st = { p: pt(e), yaw: this.yaw, pitch: this.pitch }; this.svg.classList.add('dragging'); };
+    const move = e => {
+      if (!st) return; const p = pt(e);
+      this.yaw = st.yaw + (p[0] - st.p[0]) * .5;
+      this.pitch = Math.max(-10, Math.min(85, st.pitch + (p[1] - st.p[1]) * .4));
+      if (e.cancelable) e.preventDefault();
+      this.draw();
+    };
+    const up = () => { st = null; this.svg.classList.remove('dragging'); };
+    this.svg.addEventListener('mousedown', down); window.addEventListener('mousemove', move); window.addEventListener('mouseup', up);
+    this.svg.addEventListener('touchstart', down, { passive: true }); this.svg.addEventListener('touchmove', move, { passive: false }); this.svg.addEventListener('touchend', up);
+  }
+  setCam(c, animate) {
+    if (!c) return;
+    if (animate) {
+      const from = { yaw: this.yaw, pitch: this.pitch }, t0 = performance.now();
+      const step = now => { const t = Math.min(1, (now - t0) / 700), e = ease(t); this.yaw = from.yaw + (c.yaw - from.yaw) * e; this.pitch = from.pitch + (c.pitch - from.pitch) * e; this.draw(); if (t < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    } else { this.yaw = c.yaw; this.pitch = c.pitch; }
+    if (c.k) this.k = c.k; if (c.target) this.target = c.target; if (c.cy) this.cy = c.cy; if (c.cx) this.cx = c.cx;
+  }
+  toWorld(b) { const P = POSTURES[this.posture]; return add(mv(P.M, b), this.off || P.off); }
+  proj(w) {
+    const v = sub(w, this.target);
+    const cy = Math.cos(this.yaw * D2R), sy = Math.sin(this.yaw * D2R);
+    let x = cy * v[0] + sy * v[2], z = -sy * v[0] + cy * v[2], y = v[1];
+    const cp = Math.cos(this.pitch * D2R), sp = Math.sin(this.pitch * D2R);
+    const y2 = cp * y - sp * z, z2 = sp * y + cp * z;
+    return [this.cx + x * this.k, this.cy - y2 * this.k, z2];
+  }
+  P(b) { return this.proj(this.toWorld(b)); }
+  render(state) { this.state = state; this.draw(); }
+  draw() {
+    const st = this.state; if (!st) return;
+    const pose = st.pose, S = skeleton(pose), k = this.k, id = this.id;
+    const post = POSTURES[this.posture];
+    // ajuste al suelo en bipedestación
+    if (post.floor) {
+      let minY = Infinity;
+      for (const n of ['heelR', 'heelL', 'toeR', 'toeL', 'ankleR', 'ankleL']) minY = Math.min(minY, mv(post.M, S[n])[1]);
+      this.off = [0, -minY + 3, 0];
+    } else this.off = post.off;
+    const prims = [];
+    const W = n => this.P(typeof n === 'string' ? S[n] : n);
+    const pelvisDepth = W('pelvis')[2];
+    const cap = (a, b, w, fill, stroke, dz = 0, cls = '') => {
+      const A = W(a), B = W(b); prims.push({ t: 'c', A, B, w: w * k, fill, stroke, d: (A[2] + B[2]) / 2 + dz, cls });
+    };
+    const ball = (a, r, fill, stroke, dz = 0) => { const A = W(a); prims.push({ t: 'b', A, r: r * k, fill, stroke, d: A[2] + dz }); };
+    // tronco
+    cap('spineBase', 'chest', 30, COL.shirt, COL.shirtO, -2);
+    cap('chest', 'neck', 33, COL.shirt, COL.shirtO, -2);
+    cap('shR', 'shL', 10, COL.shirt, COL.shirtO, -4);
+    cap('neck', 'head', 9, COL.skin, COL.skinO, -3);
+    const hd = W('head');
+    prims.push({ t: 'head', A: hd, r: 10.5 * k, d: hd[2] + 1 });
+    cap('pelHR', 'pelHL', 20, COL.shorts, COL.shortsO, -1);
+    cap(add(S.spineBase, mv(Rz(pose.pt), [0, 0, -3])), add(S.pelvis, mv(Rz(pose.pt), [0, -1, -3])), 23, COL.shorts, COL.shortsO, -1.5);
+    for (const side of ['R', 'L']) {
+      const far = W('knee' + side)[2] < pelvisDepth - 4;
+      const sk = far ? COL.skinD : COL.skin, sh = far ? COL.shortsD : COL.shorts, shi = far ? COL.shirtD : COL.shirt;
+      const hip = S['hip' + side], knee = S['knee' + side];
+      cap(hip, knee, 15, sk, COL.skinO);
+      cap(lerpV(hip, knee, .02), lerpV(hip, knee, .34), 16.5, sh, COL.shortsO, 9);
+      cap('knee' + side, 'ankle' + side, 11, sk, COL.skinO);
+      ball('knee' + side, 6.4, sk, null, .2);
+      cap('heel' + side, 'toe' + side, 7.5, sk, COL.skinO, .1);
+      // brazos
+      cap('sh' + side, 'elbow' + side, 9, shi, COL.shirtO);
+      cap('elbow' + side, 'hand' + side, 7.5, sk, COL.skinO);
+      ball('hand' + side, 4.6, sk, COL.skinO, .2);
+    }
+    // manos del examinador (solo guantes; el brazo lo dibuja la silueta transparente)
+    const exHands = [];
+    for (const h of (st.hands || [])) {
+      if (!S[h.at]) continue;
+      const p = add(S[h.at], h.off || [0, 0, 0]);
+      const fore = add(p, mul(norm(h.dir || [0, 0, 1]), 36));
+      const A = W(p), B = W(fore);
+      void A; void B;
+      exHands.push({ w: this.toWorld(p), a: h.a ?? 1 });
+    }
+    prims.sort((a, b) => a.d - b.d);
+    const EX = exHands.length ? this._examiner(exHands) : { sil: '', hands: '' };
+    let out = '';
+    // camilla / suelo
+    if (post.table) out += this._table();
+    if (post.floor) {
+      const f = this.proj([0, 0, 0]);
+      out += `<ellipse cx="${(W('ankleR')[0] + W('ankleL')[0]) / 2}" cy="${f[1]}" rx="${34 * k}" ry="${9 * k * Math.max(.15, Math.sin(this.pitch * D2R))}" fill="#0b3b36" opacity=".12"/>`;
+    }
+    // resaltes (músculos/estructuras) bajo el cuerpo con transparencia
+    let hiOut = '';
+    for (const h of (st.hi || [])) {
+      const a = h.a ?? 1; if (a <= .01) continue;
+      if (h.t === 'cap') {
+        const A = W(h.from), B = W(h.to);
+        hiOut += `<line x1="${A[0]}" y1="${A[1]}" x2="${B[0]}" y2="${B[1]}" stroke="${h.c || '#ff8a1f'}" stroke-width="${(h.w || 8) * k}" stroke-linecap="round" opacity="${.62 * a}"/>`;
+      } else {
+        const A = W(h.at);
+        hiOut += `<circle cx="${A[0]}" cy="${A[1]}" r="${(h.r || 7) * k}" fill="${h.c || '#ff8a1f'}" opacity="${.55 * a}"/>`;
+      }
+    }
+    for (const p of prims) {
+      const op = p.op != null ? ` opacity="${p.op}"` : '';
+      if (p.t === 'c') {
+        out += `<g${op}><line x1="${p.A[0]}" y1="${p.A[1]}" x2="${p.B[0]}" y2="${p.B[1]}" stroke="${p.stroke}" stroke-width="${p.w + 2.6}" stroke-linecap="round"/><line x1="${p.A[0]}" y1="${p.A[1]}" x2="${p.B[0]}" y2="${p.B[1]}" stroke="${p.fill}" stroke-width="${p.w}" stroke-linecap="round"/></g>`;
+      } else if (p.t === 'b') {
+        out += `<circle cx="${p.A[0]}" cy="${p.A[1]}" r="${p.r}" fill="${p.fill}"${p.stroke ? ` stroke="${p.stroke}" stroke-width="1.3"` : ''}/>`;
+      } else if (p.t === 'head') {
+        out += `<circle cx="${p.A[0]}" cy="${p.A[1]}" r="${p.r}" fill="${COL.skin}" stroke="${COL.skinO}" stroke-width="1.4"/>`;
+        // pelo: semicírculo hacia la parte posterior/craneal
+        const back = W(add(S.head, mul(norm(sub(S.head, S.belly)), 0)));
+        const top = W(add(S.head, [0, 0, 0]));
+        const crown = this.P(add(S.head, mul(norm(sub(S.head, S.neck)), 6)));
+        const posterior = this.P(add(S.head, mul(norm(sub(S.lumbar, S.belly)), 5)));
+        out += `<circle cx="${(crown[0] * .55 + posterior[0] * .45)}" cy="${(crown[1] * .55 + posterior[1] * .45)}" r="${p.r * .78}" fill="${COL.hair}" opacity=".92"/>`;
+        void back; void top;
+      } else if (p.t === 'hand') {
+        const dx = p.B[0] - p.A[0], dy = p.B[1] - p.A[1], ang = Math.atan2(dy, dx) * 180 / Math.PI;
+        out += `<g${op} transform="translate(${p.A[0]},${p.A[1]}) rotate(${ang})"><ellipse cx="2" cy="0" rx="${p.r * 1.25}" ry="${p.r * .95}" fill="${COL.glove}" stroke="${COL.gloveO}" stroke-width="1.5"/><ellipse cx="${-p.r * .7}" cy="${-p.r * .5}" rx="${p.r * .55}" ry="${p.r * .3}" fill="${COL.glove}" stroke="${COL.gloveO}" stroke-width="1.2"/></g>`;
+      }
+    }
+    out += hiOut;
+    out += EX.sil + EX.hands;
+    // líneas de referencia
+    for (const l of (st.lines || [])) {
+      const a = l.a ?? 1; if (a <= .01) continue;
+      let A = W(l.from), B = W(l.to);
+      const ext = l.ext || 0;
+      if (ext) { const d = [B[0] - A[0], B[1] - A[1]], L = Math.hypot(d[0], d[1]) || 1; A = [A[0] - d[0] / L * ext, A[1] - d[1] / L * ext]; B = [B[0] + d[0] / L * ext, B[1] + d[1] / L * ext]; }
+      out += `<line x1="${A[0]}" y1="${A[1]}" x2="${B[0]}" y2="${B[1]}" stroke="${l.c || '#0b3b36'}" stroke-width="${l.w || 3}" stroke-dasharray="${l.dash || '8 6'}" stroke-linecap="round" opacity="${a}"/>`;
+    }
+    // flechas
+    for (const ar of (st.arrows || [])) {
+      const a = ar.a ?? 1; if (a <= .01 || !S[ar.at]) continue;
+      const tip = add(S[ar.at], ar.off || [0, 0, 0]);
+      const tail = add(tip, mul(norm(ar.dir), -(ar.len || 22)));
+      const A = W(tail), B = W(tip);
+      const c = ar.c || COL.exa;
+      out += `<line class="flow" x1="${A[0]}" y1="${A[1]}" x2="${B[0]}" y2="${B[1]}" stroke="${c}" stroke-width="5" stroke-linecap="round" marker-end="url(#ah_${id})" opacity="${a}"/>`;
+      if (ar.label) out += this._label(A[0], A[1], ar.label, c, a);
+    }
+    // dolor
+    const pain = st.pain;
+    if (pain && pain.v > .05 && S[pain.at]) {
+      const A = W(pain.at), r = (8 + pain.v * 2.2) * k;
+      out += `<g class="painpulse" style="transform-origin:${A[0]}px ${A[1]}px"><circle cx="${A[0]}" cy="${A[1]}" r="${r}" fill="url(#pg_${id})"/></g>`;
+      out += `<circle cx="${A[0]}" cy="${A[1]}" r="${3 + pain.v * .35}" fill="#fff" stroke="${COL.pain}" stroke-width="2.5"/>`;
+      if (pain.txt && pain.show) {
+        const H = W('head');
+        out += this._bubble(H[0], H[1] - 14 * k, pain.txt, Math.min(1, pain.show));
+      }
+    }
+    // etiquetas
+    for (const t of (st.tags || [])) {
+      const a = t.a ?? 1; if (a <= .01 || !S[t.at]) continue;
+      const A = W(add(S[t.at], t.off || [0, 0, 0]));
+      const dx = t.dx ?? 40, dy = t.dy ?? -40;
+      const c = t.c || '#0b3b36';
+      out += `<g opacity="${a}"><line x1="${A[0]}" y1="${A[1]}" x2="${A[0] + dx}" y2="${A[1] + dy}" stroke="${c}" stroke-width="1.6"/><circle cx="${A[0]}" cy="${A[1]}" r="3.2" fill="${c}"/></g>`;
+      out += this._label(A[0] + dx, A[1] + dy, t.txt, c, a, dx < 0 ? 'end' : 'start');
+    }
+    this.g.innerHTML = out;
+  }
+
+  /* Examinador: silueta transparente SIEMPRE al lado derecho del paciente; manos realistas y opacas */
+  _examiner(hands) {
+    const a = Math.max(...hands.map(h => h.a)); if (a <= .02) return { sil: '', hands: '' };
+    const post = this.posture, n = hands.length;
+    const hc = hands.reduce((s, h) => add(s, mul(h.w, 1 / n)), [0, 0, 0]);
+    // base y orientación (f = hacia dónde mira el examinador)
+    let base, f, floor;
+    if (post === 'supine') { floor = -72; base = [hc[0], floor, 50]; f = [0, 0, -1]; }        // derecha del paciente = +Z
+    else if (post === 'lateral') { floor = -72; base = [hc[0], floor, 50]; f = [0, 0, -1]; }  // detrás del paciente (lado derecho arriba)
+    else { floor = 0; base = [-46, 0, hc[2] - 4]; f = [1, 0, 0]; }                            // de pie: a la derecha del paciente (−X)
+    const lat = [f[2], 0, -f[0]];                       // eje transversal del examinador
+    const pelvis = add(base, [0, 96, 0]);
+    let sc = add(base, [0, Math.max(128, hc[1] - floor + 24), 0]);
+    const toH = sub(hc, sc), dH = vlen(toH);
+    if (dH > 40) sc = add(sc, mul(norm(toH), dH - 40));
+    const up = norm(sub(sc, pelvis)), head = add(sc, mul(up, 21));
+    const shA = add(sc, mul(lat, -17)), shB = add(sc, mul(lat, 17));
+    const hipA = add(pelvis, mul(lat, -10)), hipB = add(pelvis, mul(lat, 10));
+    const along = v => dot(v, lat);
+    const sorted = hands.map((h, i) => ({ ...h, i })).sort((p, q) => along(p.w) - along(q.w));
+    const out = [];
+    const arm = (sh, h, side) => {
+      const tgt = h ? h.w : add(sh, add(mul(lat, side * 4), [0, -52, 0]));
+      const r = ik2(sh, tgt, 31, 29, add(mul(lat, side * .8), add([0, -.5, 0], mul(f, -.3))));
+      if (h) out.push({ h, e: r.e });
+      return [[sh, r.e, 9], [r.e, r.h, 8]];
+    };
+    let armA, armB;
+    if (n >= 2) { armA = arm(shA, sorted[0], -1); armB = arm(shB, sorted[n - 1], 1); }
+    else if (along(sorted[0].w) < along(sc)) { armA = arm(shA, sorted[0], -1); armB = arm(shB, null, 1); }
+    else { armA = arm(shA, null, -1); armB = arm(shB, sorted[0], 1); }
+    const segs = [[pelvis, sc, 30], [shA, shB, 12], [sc, add(sc, mul(up, 8)), 10],
+      [hipA, add(hipA, [0, 4 - 96, 0]), 13], [hipB, add(hipB, [0, 4 - 96, 0]), 13], ...armA, ...armB];
+    const P = v => this.proj(v), k = this.k;
+    const line = (sg, w, c) => { const A = P(sg[0]), B = P(sg[1]); return `<line x1="${A[0]}" y1="${A[1]}" x2="${B[0]}" y2="${B[1]}" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`; };
+    const H = P(head);
+    let sil = `<g opacity="${.3 * a}" style="pointer-events:none">`;
+    sil += segs.map(sg => line(sg, sg[2] * k + 4, '#2f6fd6')).join('') + `<circle cx="${H[0]}" cy="${H[1]}" r="${10 * k + 2}" fill="#2f6fd6"/>`;
+    sil += segs.map(sg => line(sg, sg[2] * k, '#eef4fd')).join('') + `<circle cx="${H[0]}" cy="${H[1]}" r="${10 * k - 2}" fill="#eef4fd"/>`;
+    sil += `</g>`;
+    const T = P(add(head, mul(up, 16)));
+    sil += `<text x="${T[0]}" y="${T[1]}" text-anchor="middle" font-size="12" font-weight="800" fill="#2f6fd6" opacity="${.8 * a}">Examinador</text>`;
+    // manos realistas (dorso, cuatro dedos y pulgar), orientadas desde el codo
+    let hs = '';
+    for (const { h, e } of out) {
+      const A = P(h.w), E = P(e), r = 5.6 * k;
+      const ang = Math.atan2(A[1] - E[1], A[0] - E[0]) * 180 / Math.PI;
+      const sk = '#d7a07a', so = '#7a4b30', cuff = '#ffffff';
+      const flip = (Math.cos(ang * D2R) < 0) ? -1 : 1;
+      hs += `<g opacity="${h.a}" transform="translate(${A[0]},${A[1]}) rotate(${ang}) scale(1,${flip})">
+        <line x1="${-2.6 * r}" y1="0" x2="${-0.9 * r}" y2="0" stroke="${so}" stroke-width="${0.95 * r + 2.4}" stroke-linecap="round"/>
+        <line x1="${-2.6 * r}" y1="0" x2="${-0.9 * r}" y2="0" stroke="${sk}" stroke-width="${0.95 * r}" stroke-linecap="round"/>
+        <line x1="${-2.9 * r}" y1="0" x2="${-2.2 * r}" y2="0" stroke="#9fb3c9" stroke-width="${1.25 * r + 2}" stroke-linecap="butt"/>
+        <line x1="${-2.9 * r}" y1="0" x2="${-2.25 * r}" y2="0" stroke="${cuff}" stroke-width="${1.25 * r}" stroke-linecap="butt"/>
+        ${[-.5, -.17, .17, .5].map((y, i) => { const L = [1.55, 1.8, 1.72, 1.45][i]; return `<line x1="${.45 * r}" y1="${y * r}" x2="${L * r}" y2="${y * r * 1.12}" stroke="${so}" stroke-width="${.34 * r + 2.2}" stroke-linecap="round"/><line x1="${.45 * r}" y1="${y * r}" x2="${L * r}" y2="${y * r * 1.12}" stroke="${sk}" stroke-width="${.34 * r}" stroke-linecap="round"/>`; }).join('')}
+        <line x1="${-.2 * r}" y1="${-.62 * r}" x2="${.75 * r}" y2="${-1.15 * r}" stroke="${so}" stroke-width="${.4 * r + 2.2}" stroke-linecap="round"/>
+        <line x1="${-.2 * r}" y1="${-.62 * r}" x2="${.75 * r}" y2="${-1.15 * r}" stroke="${sk}" stroke-width="${.4 * r}" stroke-linecap="round"/>
+        <rect x="${-1 * r}" y="${-.78 * r}" width="${1.75 * r}" height="${1.56 * r}" rx="${.6 * r}" fill="${sk}" stroke="${so}" stroke-width="1.3"/>
+        ${[-.5, -.17, .17, .5].map(y => `<circle cx="${.62 * r}" cy="${y * r}" r="${.12 * r}" fill="#c18a65"/>`).join('')}
+      </g>`;
+    }
+    return { sil, hands: hs };
+  }
+  _label(x, y, txt, c, a = 1, anchor = 'middle') {
+    const w = txt.length * 7.4 + 16, h = 24;
+    const x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
+    return `<g opacity="${a}"><rect x="${x0}" y="${y - h / 2}" width="${w}" height="${h}" rx="12" fill="#fff" stroke="${c}" stroke-width="1.6"/><text x="${x0 + w / 2}" y="${y + 4.5}" text-anchor="middle" font-size="12.5" font-weight="700" fill="${c}">${txt}</text></g>`;
+  }
+  _bubble(x, y, txt, a) {
+    const lines = wrapText(txt, 26);
+    const w = Math.max(...lines.map(l => l.length)) * 7.6 + 26, h = lines.length * 17 + 16;
+    let X = Math.max(8, Math.min(this.W - w - 8, x - w / 2)), Y = Math.max(8, y - h - 18);
+    let s = `<g opacity="${a}" class="bubble"><path d="M${X + 14},${Y} h${w - 28} a14,14 0 0 1 14,14 v${h - 28} a14,14 0 0 1 -14,14 h${-(w / 2 - 14 - 10) + (x - X - w / 2)} l-8,14 l-4,-14 h${-(x - X - 22)} a14,14 0 0 1 -14,-14 v${-(h - 28)} a14,14 0 0 1 14,-14 z" fill="#fff" stroke="${COL.pain}" stroke-width="2.2"/>`;
+    lines.forEach((l, i) => { s += `<text x="${X + w / 2}" y="${Y + 22 + i * 17}" text-anchor="middle" font-size="13.5" font-weight="700" fill="${COL.pain}">${l}</text>`; });
+    return s + '</g>';
+  }
+  _table() {
+    const P = (x, y, z) => this.proj([x, y, z]);
+    const x0 = -112, x1 = 100, z0 = -30, z1 = 30, y0 = 0, y1 = -9;
+    const top = [P(x0, y0, z0), P(x1, y0, z0), P(x1, y0, z1), P(x0, y0, z1)];
+    const front = [P(x0, y0, z1), P(x1, y0, z1), P(x1, y1, z1), P(x0, y1, z1)];
+    const side = [P(x1, y0, z0), P(x1, y0, z1), P(x1, y1, z1), P(x1, y1, z0)];
+    const sideL = [P(x0, y0, z0), P(x0, y0, z1), P(x0, y1, z1), P(x0, y1, z0)];
+    const back = [P(x0, y0, z0), P(x1, y0, z0), P(x1, y1, z0), P(x0, y1, z0)];
+    const poly = (pts, f, s) => `<polygon points="${pts.map(p => p[0] + ',' + p[1]).join(' ')}" fill="${f}" stroke="${s}" stroke-width="1.2" stroke-linejoin="round"/>`;
+    let o = '';
+    const legs = [[x0 + 12, z0 + 6], [x1 - 12, z0 + 6], [x0 + 12, z1 - 6], [x1 - 12, z1 - 6]];
+    for (const [lx, lz] of legs) { const a = P(lx, y1, lz), b = P(lx, -70, lz); o += `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#9fb3ad" stroke-width="${3 * this.k}" stroke-linecap="round"/>`; }
+    // cara visible según la cámara
+    const yawc = Math.cos(this.yaw * D2R), yaws = Math.sin(this.yaw * D2R);
+    if (this.pitch < 0) o += poly(top.map(p => p), '#cfe7dc', '#7fa89a');
+    o += yawc >= 0 ? poly(front, '#2b7d68', '#1d5c4c') : poly(back, '#2b7d68', '#1d5c4c');
+    o += yaws < 0 ? poly(side, '#236a58', '#1d5c4c') : poly(sideL, '#236a58', '#1d5c4c');
+    if (this.pitch >= 0) o += poly(top, '#d7efe4', '#7fa89a');
+    // almohada
+    const pl = [P(x0 + 4, .5, -16), P(x0 + 30, .5, -16), P(x0 + 30, .5, 16), P(x0 + 4, .5, 16)];
+    o += poly(pl, '#ffffff', '#b8cfc7');
+    return o;
+  }
+}
+function wrapText(t, n) {
+  const w = t.split(' '), out = []; let cur = '';
+  for (const x of w) { if ((cur + ' ' + x).trim().length > n) { out.push(cur.trim()); cur = x; } else cur += ' ' + x; }
+  if (cur.trim()) out.push(cur.trim()); return out;
+}
+
+</script>
+<script>
+/* ================= Aplicación: semiología de cadera y pelvis ================= */
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const RLAT = [-1, 0, 0], LLAT = [1, 0, 0];
+const UPR = [-.55, .1, .85];          // antebrazo del examinador (lado derecho, desde arriba) en decúbito supino
+const SUP_CAM = { yaw: -22, pitch: 32, k: 3.1, target: [18, 8, 0], cy: 292 };
+const STAND_CAM = { yaw: 180, pitch: 6, k: 2.35, target: [0, 92, 0], cy: 262 };
+const LAT_CAM = { yaw: 8, pitch: 24, k: 3.1, target: [22, 14, 0], cy: 300 };
+
+const PH = {
+  act: { cls: 'ph-act', col: 'var(--g2)', ic: "<svg class=\"i\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"4\" r=\"2.4\" fill=\"currentColor\"/><path d=\"M4 14l1.6-6h4.8L12 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>", t: 'Fase activa', s: 'el paciente lo hace solo', who: 'Paciente · activo' },
+  exa: { cls: 'ph-exa', col: 'var(--exa)', ic: "<svg class=\"i\" viewBox=\"0 0 16 16\"><path d=\"M4 9V5.5a1 1 0 0 1 2 0V8M6 8V3.5a1 1 0 0 1 2 0V8M8 8V4a1 1 0 0 1 2 0v4M10 8V5.5a1 1 0 0 1 2 0V10c0 2.5-1.6 4-4 4S4 12.5 4 11V9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>", t: 'Fase guiada', s: 'el examinador moviliza y fija', who: 'Examinador · guiado' },
+  ins: { cls: 'ph-ins', col: 'var(--ins)', ic: "<svg class=\"i\" viewBox=\"0 0 16 16\"><path d=\"M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"/><circle cx=\"8\" cy=\"8\" r=\"2.2\" fill=\"currentColor\"/></svg>", t: 'Inspección', s: 'observar y comparar, sin movilizar', who: 'Inspección' },
+  tra: { cls: 'ph-tra', col: '#b42318', ic: "<svg class=\"i\" viewBox=\"0 0 16 16\"><path d=\"M8 1.5 15 14H1z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"/><path d=\"M8 6v3.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"8\" cy=\"11.8\" r=\"1\" fill=\"currentColor\"/></svg>", t: 'Signo en trauma', s: 'una sola vez y con suavidad', who: 'Examinador · trauma' }
+};
+
+/* ---------- Definición de maniobras ---------- */
+const MAN = {
+  faber: {
+    name: 'FABER · Patrick', group: 'Sin trauma', short: 'flexión · abducción · RE', posture: 'supine', cam: SUP_CAM,
+    sub: 'Decúbito supino · pierna en “figura de 4” · cadera derecha',
+    variants: [{ id: 'n', l: 'Normal' }, { id: 'hip', l: '(+) Dolor en ingle', pos: 1 }, { id: 'si', l: '(+) Dolor glúteo posterior', pos: 1 }],
+    result: {
+      n: ['Negativa', 'Rango completo y sin dolor: la rodilla desciende casi hasta la camilla.'],
+      hip: ['Positiva · ingle', 'El dolor aparece en la ingle: orienta a patología de la articulación de la cadera.'],
+      si: ['Positiva · región glútea posterior', 'El dolor aparece atrás, en la región glútea: puede orientar a la articulación sacroilíaca.']
+    },
+    steps: [
+      { ph: 'act', t: 'Posición inicial', d: 'Paciente en decúbito supino con ambas piernas extendidas. Se explica la maniobra antes de tocarlo.', pose: {} },
+      { ph: 'act', t: 'Arma la “figura de 4” él mismo', d: 'Sin ayuda, flexiona la cadera y la rodilla derechas y apoya el tobillo sobre la rodilla izquierda.', pose: { R: { flex: 32, abd: 28, rot: -68, knee: 116 } }, dur: 1900,
+        arrows: [{ at: 'kneeR', off: [0, 0, 6], dir: [-.3, .4, .9], c: '#1fae55', len: 20 }], tags: [{ at: 'ankleR', txt: 'Tobillo sobre rodilla contraria', dx: 60, dy: -70 }] },
+      { ph: 'act', t: 'Deja caer la rodilla por su propio peso', d: 'El paciente relaja la cadera y deja que la rodilla derecha descienda hacia la camilla (abducción + rotación externa activa). Se observa el rango y si aparece dolor.',
+        pose: { R: { flex: 26, abd: 38, rot: -80, knee: 118 } }, dur: 1800,
+        arrows: [{ at: 'kneeR', off: [0, 0, 7], dir: [-.6, 0, -.8], c: '#1fae55', len: 22, label: 'Desciende sola' }],
+        v: { hip: { pain: { v: 3, at: 'groinR', txt: 'Molestia leve en la ingle' } }, si: { pain: { v: 3, at: 'siR', txt: 'Molestia leve atrás, en la nalga' } } } },
+      { ph: 'exa', t: 'Fija la EIAS contraria', d: 'El examinador apoya una mano sobre la espina ilíaca anterosuperior izquierda para que la pelvis no rote.',
+        hands: [{ at: 'asisL', off: [0, 0, 4], dir: [-.2, .35, .9] }], tags: [{ at: 'asisL', txt: 'Fija EIAS contraria', dx: -40, dy: -70 }] },
+      { ph: 'exa', t: 'Presiona suavemente la rodilla', d: 'Con la otra mano lleva la rodilla derecha hacia la camilla: flexión, abducción y rotación externa forzadas. Pregunte dónde duele.',
+        pose: { R: { flex: 22, abd: 44, rot: -86, knee: 120 } }, dur: 1700,
+        hands: [{ at: 'asisL', off: [0, 0, 4], dir: [-.2, .35, .9] }, { at: 'kneeR', off: [-2, 0, 7], dir: UPR }],
+        arrows: [{ at: 'kneeR', off: [-3, 0, 9], dir: [-.45, 0, -1], label: 'Presión' }],
+        v: { hip: { pain: { v: 7, at: 'groinR', txt: '¡Me duele en la ingle!' } }, si: { pain: { v: 7, at: 'siR', txt: '¡Me duele atrás, en la nalga!' } }, n: { tags: [{ at: 'kneeR', txt: 'Rango completo, sin dolor', dx: 70, dy: -40, c: '#1fae55' }] } } }
+    ]
+  },
+
+  thomas: {
+    name: 'Test de Thomas', group: 'Sin trauma', short: 'déficit de extensión', posture: 'supine', cam: { yaw: -12, pitch: 12, k: 3.1, target: [22, 14, 0], cy: 335 },
+    sub: 'Decúbito supino · se evalúan los flexores de la cadera derecha',
+    variants: [{ id: 'n', l: 'Normal' }, { id: 'pos', l: '(+) Flexores acortados', pos: 1 }],
+    result: {
+      n: ['Negativa', 'El muslo derecho permanece apoyado en la camilla: no hay déficit de extensión.'],
+      pos: ['Positiva', 'El muslo derecho se eleva de la camilla: déficit de extensión de cadera compatible con acortamiento de los flexores (iliopsoas, recto femoral).']
+    },
+    steps: [
+      { ph: 'act', t: 'Posición inicial', d: 'Decúbito supino en la camilla, ambas piernas extendidas.', pose: {} },
+      { ph: 'act', t: 'Lleva la rodilla izquierda al pecho', d: 'El paciente, por sí solo, flexiona la cadera y rodilla izquierdas y abraza la rodilla con ambas manos. Esto aplana la lordosis lumbar.',
+        pose: { L: { flex: 112, knee: 122 }, aR: { ik: 1 }, aL: { ik: 1 }, tR: 'kneeL', tL: 'kneeL', pp: 8 }, dur: 2000,
+        arrows: [{ at: 'kneeL', off: [0, 0, 6], dir: [0, 1, .3], c: '#1fae55', len: 22 }],
+        v: { pos: { pose: { R: { flex: 16, knee: 18 } } } } },
+      { ph: 'act', t: 'Se observa el muslo contrario', d: 'Sin tocar al paciente, mire el muslo derecho: ¿sigue apoyado o se despega de la camilla?',
+        v: {
+          n: { tags: [{ at: 'thighMidR', txt: 'Normal: muslo en la camilla', dx: 40, dy: 60, c: '#1fae55' }] },
+          pos: { tags: [{ at: 'kneeR', txt: 'El muslo se eleva', dx: 50, dy: -60, c: '#e5484d' }], pain: { v: 2, at: 'groinR', txt: 'Siento tirante la ingle' } }
+        } },
+      { ph: 'exa', t: 'El examinador completa la flexión', d: 'Toma la rodilla izquierda y la lleva al máximo hacia el pecho; verifica (con una mano bajo la columna lumbar) que la lordosis se aplanó.',
+        pose: { L: { flex: 124, knee: 130 }, aR: { ik: .7 }, aL: { ik: .7 }, pp: 12 },
+        hands: [{ at: 'kneeL', off: [0, 2, 6], dir: [-.5, -.3, .8] }],
+        tags: [{ at: 'lumbar', txt: 'Lordosis lumbar aplanada', dx: -60, dy: 70, c: '#2f6fd6' }],
+        v: { pos: { pose: { R: { flex: 24, knee: 22 } }, pain: { v: 3, at: 'groinR', txt: 'Tira en la ingle derecha' } } } },
+      { ph: 'exa', t: 'Mide el ángulo muslo–camilla', d: 'Observa el muslo derecho sin presionarlo. El ángulo entre el muslo y la camilla expresa el déficit de extensión.',
+        hands: [{ at: 'kneeL', off: [0, 2, 6], dir: [-.5, -.3, .8] }],
+        lines: [{ from: 'hipR', to: 'kneeR', c: '#2f6fd6', ext: 40 }],
+        v: {
+          n: { tags: [{ at: 'kneeR', txt: '0° · sin déficit', dx: 60, dy: -50, c: '#1fae55' }] },
+          pos: { tags: [{ at: 'kneeR', txt: '≈ 25° de déficit de extensión', dx: 60, dy: -70, c: '#e5484d' }], pain: { v: 2, at: 'groinR', txt: 'Tira en la ingle derecha' } }
+        } }
+    ]
+  },
+
+  ober: {
+    name: 'Test de Ober', group: 'Sin trauma', short: 'restricción de la aducción', posture: 'lateral', cam: LAT_CAM,
+    sub: 'Decúbito lateral · lado sano (izquierdo) abajo · se evalúa la cintilla iliotibial derecha',
+    base: { L: { flex: 0, knee: 0 }, tl: 9, aL: { flex: 100, abd: 10, elb: 70 }, aR: { flex: 60, abd: -52, elb: 30 } },
+    variants: [{ id: 'n', l: 'Normal' }, { id: 'pos', l: '(+) Cintilla tensa', pos: 1 }],
+    result: {
+      n: ['Negativa', 'Al soltarla, la pierna desciende por debajo de la horizontal: aducción pasiva conservada.'],
+      pos: ['Positiva', 'La pierna no desciende: restricción de la aducción pasiva por cintilla iliotibial / TFL tensos.']
+    },
+    steps: [
+      { ph: 'act', t: 'Posición inicial', d: 'Decúbito lateral sobre el lado sano (izquierdo), con el miembro inferior que está en contacto con la camilla en extensión completa.', pose: {} },
+      { ph: 'act', t: 'Eleva la pierna superior', d: 'El paciente, por sí solo, separa la pierna derecha (abducción) con la rodilla flexionada a 90°.', pose: { R: { abd: 32, knee: 90 } }, dur: 1700,
+        arrows: [{ at: 'kneeR', off: [0, 0, 0], dir: [-1, 0, 0], c: '#1fae55', len: 22, label: 'Abducción' }] },
+      { ph: 'act', t: 'Lleva la cadera hacia atrás', d: 'Sin bajar la pierna, la lleva ligeramente hacia atrás (extensión), alineada con el tronco.', pose: { R: { flex: -12 } },
+        arrows: [{ at: 'kneeR', off: [0, 0, -4], dir: [0, 0, -1], c: '#1fae55', len: 18, label: 'Extensión' }] },
+      { ph: 'act', t: 'Relaja la pierna', d: 'El paciente deja caer la pierna lentamente. Se observa si desciende.',
+        v: {
+          n: { pose: { R: { abd: -8 } }, tags: [{ at: 'kneeR', txt: 'Desciende', dx: 70, dy: -30, c: '#1fae55' }] },
+          pos: { pose: { R: { abd: 22 } }, tags: [{ at: 'kneeR', txt: 'No desciende', dx: 70, dy: -40, c: '#e5484d' }], pain: { v: 3, at: 'thighLatR', txt: 'Tirantez en el lado del muslo' } }
+        } },
+      { ph: 'exa', t: 'Fija la pelvis y toma la rodilla', d: 'El examinador fija la pelvis sobre la cresta ilíaca y sujeta la rodilla; lleva la cadera a abducción y extensión con la rodilla a 90°.',
+        pose: { R: { abd: 32, flex: -12, knee: 90 } },
+        hands: [{ at: 'crestR', off: [-3, 0, -2], dir: [-.6, .5, -.6] }, { at: 'kneeR', off: [-4, 0, 0], dir: [-.6, -.2, -.8] }],
+        tags: [{ at: 'crestR', txt: 'Fija la pelvis', dx: -60, dy: -60 }] },
+      { ph: 'exa', t: 'Suelta la pierna lentamente', d: 'Retira la mano de la rodilla y deja que la gravedad actúe. Normal: desciende hacia la camilla.',
+        hands: [{ at: 'crestR', off: [-3, 0, -2], dir: [-.6, .5, -.6] }], dur: 1800,
+        v: {
+          n: { pose: { R: { abd: -8 } }, tags: [{ at: 'kneeR', txt: 'Desciende bajo la horizontal', dx: 70, dy: -40, c: '#1fae55' }] },
+          pos: { pose: { R: { abd: 24 } }, tags: [{ at: 'kneeR', txt: 'Permanece elevado', dx: 70, dy: -40, c: '#e5484d' }], pain: { v: 4, at: 'thighLatR', txt: 'Me tira el lado del muslo' },
+            hi: [{ t: 'cap', from: 'trochR', to: 'kneeLatR', w: 4, c: '#e5484d' }] }
+        } }
+    ]
+  },
+
+  fadir: {
+    name: 'FADIR', group: 'Sin trauma', short: 'dolor inguinal intraarticular', posture: 'supine', cam: { yaw: -30, pitch: 26, k: 3.1, target: [22, 14, 0], cy: 310 },
+    sub: 'Decúbito supino · cadera y rodilla derechas a 90°',
+    variants: [{ id: 'n', l: 'Normal' }, { id: 'pos', l: '(+) Dolor inguinal', pos: 1 }],
+    result: {
+      n: ['Negativa', 'Rango completo de flexión, aducción y rotación interna sin dolor.'],
+      pos: ['Positiva', 'Reproduce el dolor inguinal habitual: orienta a patología intraarticular, como el pinzamiento femoroacetabular.']
+    },
+    steps: [
+      { ph: 'act', t: 'Posición inicial', d: 'Decúbito supino con las piernas extendidas.', pose: {} },
+      { ph: 'act', t: 'Flexiona cadera y rodilla a 90°', d: 'El paciente, por sí solo, lleva la cadera y la rodilla derechas a 90°.', pose: { R: { flex: 90, knee: 90 } }, dur: 1800,
+        arrows: [{ at: 'kneeR', off: [0, 0, 6], dir: [0, .6, .8], c: '#1fae55', len: 20 }] },
+      { ph: 'act', t: 'Lleva la rodilla hacia adentro', d: 'Sin ayuda, cruza la rodilla hacia el lado contrario (aducción).', pose: { R: { abd: -14 } },
+        arrows: [{ at: 'kneeR', off: [-6, 0, 0], dir: [1, 0, 0], c: '#1fae55', len: 18, label: 'Aducción' }],
+        v: { pos: { pain: { v: 2, at: 'groinR', txt: 'Siento algo en la ingle' } } } },
+      { ph: 'act', t: 'Gira el pie hacia afuera', d: 'Con la rodilla adentro, lleva el pie hacia afuera: eso es rotación interna activa de la cadera.', pose: { R: { rot: 18 } },
+        arrows: [{ at: 'ankleR', off: [-5, 0, 0], dir: [-1, 0, 0], c: '#1fae55', len: 18, label: 'Pie afuera = RI' }],
+        v: { pos: { pain: { v: 4, at: 'groinR', txt: 'Me molesta la ingle' } } } },
+      { ph: 'exa', t: 'Toma la rodilla y el tobillo', d: 'El examinador sujeta la rodilla y el tobillo y devuelve la cadera a 90/90 neutro.',
+        pose: { R: { abd: 0, rot: 0 } },
+        hands: [{ at: 'kneeR', off: [0, 2, 6], dir: [-.4, .3, .9] }, { at: 'ankleR', off: [-5, 0, 0], dir: [-1, -.2, .2] }] },
+      { ph: 'exa', t: 'Aducción pasiva', d: 'Lleva la rodilla hacia el lado contrario.',
+        pose: { R: { abd: -22 } }, hands: [{ at: 'kneeR', off: [0, 2, 6], dir: [-.4, .3, .9] }, { at: 'ankleR', off: [-5, 0, 0], dir: [-1, -.2, .2] }],
+        arrows: [{ at: 'kneeR', off: [-7, 0, 2], dir: [1, 0, 0], label: 'Aducción' }],
+        v: { pos: { pain: { v: 3, at: 'groinR', txt: 'Empieza a doler' } } } },
+      { ph: 'exa', t: 'Rotación interna al final del rango', d: 'Lleva el tobillo hacia afuera (rotación interna) hasta el final del rango. Pregunte: ¿es su dolor de siempre?',
+        pose: { R: { rot: 34 } }, dur: 1700, hands: [{ at: 'kneeR', off: [0, 2, 6], dir: [-.4, .3, .9] }, { at: 'ankleR', off: [-5, 0, 0], dir: [-1, -.2, .2] }],
+        arrows: [{ at: 'ankleR', off: [-6, 0, 0], dir: [-1, 0, 0], label: 'Rotación interna' }],
+        v: { pos: { pain: { v: 8, at: 'groinR', txt: '¡Ese es mi dolor, en la ingle!' } }, n: { tags: [{ at: 'groinR', txt: 'Sin dolor', dx: -60, dy: -60, c: '#1fae55' }] } } }
+    ]
+  },
+
+  trend: {
+    name: 'Signo de Trendelenburg', group: 'Sin trauma', short: 'debilidad del glúteo medio', posture: 'standing', cam: STAND_CAM,
+    sub: 'De pie · vista posterior · se evalúa el glúteo medio derecho (apoyo derecho)', base: { cmp: 1 },
+    variants: [{ id: 'n', l: 'Normal' }, { id: 'pos', l: '(+) Glúteo medio débil', pos: 1 }],
+    result: {
+      n: ['Negativo', 'Al apoyarse en la pierna derecha la pelvis se mantiene nivelada o el lado elevado sube.'],
+      pos: ['Positivo', 'Cae la pelvis del lado contrario (izquierdo): debilidad del glúteo medio del lado de apoyo (derecho).']
+    },
+    steps: [
+      { ph: 'act', t: 'De pie, de espaldas al examinador', d: 'Peso repartido en ambos pies. Observe la línea entre ambas crestas ilíacas: está nivelada.', pose: {},
+        lines: [{ from: 'crestR', to: 'crestL', c: '#1fae55', ext: 45 }] },
+      { ph: 'act', t: 'Se apoya solo en la pierna derecha', d: 'El paciente levanta el pie izquierdo (flexiona cadera y rodilla) y se sostiene sobre la pierna derecha.',
+        pose: { L: { flex: 30, knee: 75 } }, dur: 1800,
+        hi: [{ t: 'cap', from: 'gmedR', to: 'trochR', w: 11, c: '#ff8a1f' }],
+        v: {
+          n: { pose: { pt: 4 }, lines: [{ from: 'crestR', to: 'crestL', c: '#1fae55', ext: 45 }], tags: [{ at: 'crestL', txt: 'Pelvis nivelada', dx: 60, dy: -50, c: '#1fae55' }] },
+          pos: { pose: { pt: -10, tl: 6 }, lines: [{ from: 'crestR', to: 'crestL', c: '#e5484d', ext: 45 }], tags: [{ at: 'crestL', txt: 'Cae la pelvis', dx: 60, dy: -50, c: '#e5484d' }],
+            hi: [{ t: 'cap', from: 'gmedR', to: 'trochR', w: 11, c: '#e5484d' }] }
+        } },
+      { ph: 'act', t: 'Mantiene la posición 30 segundos', d: 'Se observa si la pelvis cae tardíamente (fatiga) o si el tronco se inclina hacia el lado de apoyo para compensar.',
+        hi: [{ t: 'cap', from: 'gmedR', to: 'trochR', w: 11, c: '#ff8a1f' }],
+        v: {
+          n: { lines: [{ from: 'crestR', to: 'crestL', c: '#1fae55', ext: 45 }], tags: [{ at: 'trochR', txt: 'Glúteo medio sostiene la pelvis', dx: -70, dy: 40, c: '#1fae55' }] },
+          pos: { pose: { pt: -11, tl: 9 }, lines: [{ from: 'crestR', to: 'crestL', c: '#e5484d', ext: 45 }], tags: [{ at: 'chest', txt: 'Tronco se inclina a la derecha', dx: -80, dy: -40, c: '#e5484d' }, { at: 'trochR', txt: 'Glúteo medio débil', dx: -70, dy: 50, c: '#e5484d' }],
+            hi: [{ t: 'cap', from: 'gmedR', to: 'trochR', w: 11, c: '#e5484d' }] }
+        } },
+      { ph: 'exa', t: 'Manos sobre ambas crestas ilíacas', d: 'Con ambos pies en el suelo, el examinador ubica sus manos (o pulgares) sobre las crestas ilíacas para comparar la altura.',
+        pose: { L: { flex: 0, knee: 0 }, pt: 0, tl: 0 },
+        hands: [{ at: 'crestR', off: [-2, 1, -3], dir: [-.3, -.2, -1] }, { at: 'crestL', off: [2, 1, -3], dir: [.3, -.2, -1] }],
+        lines: [{ from: 'crestR', to: 'crestL', c: '#2f6fd6', ext: 45 }] },
+      { ph: 'exa', t: 'Repite el apoyo monopodal', d: 'El paciente vuelve a levantar el pie izquierdo; el examinador siente y ve si la cresta izquierda cae. Puede ofrecer un dedo para el equilibrio, sin sostener el peso.',
+        pose: { L: { flex: 30, knee: 75 } }, dur: 1800,
+        hands: [{ at: 'crestR', off: [-2, 1, -3], dir: [-.3, -.2, -1] }, { at: 'crestL', off: [2, 1, -3], dir: [.3, -.2, -1] }],
+        v: {
+          n: { pose: { pt: 4 }, lines: [{ from: 'crestR', to: 'crestL', c: '#1fae55', ext: 45 }], tags: [{ at: 'crestL', txt: 'Normal', dx: 60, dy: -50, c: '#1fae55' }] },
+          pos: { pose: { pt: -10, tl: 6 }, lines: [{ from: 'crestR', to: 'crestL', c: '#e5484d', ext: 45 }], tags: [{ at: 'crestL', txt: 'Trendelenburg (+)', dx: 60, dy: -50, c: '#e5484d' }],
+            hi: [{ t: 'cap', from: 'gmedR', to: 'trochR', w: 11, c: '#e5484d' }] }
+        } }
+    ]
+  },
+
+  fx: {
+    name: 'Fractura de cadera', group: 'Trauma · inspección', short: 'acortamiento + RE', posture: 'supine', cam: { yaw: -8, pitch: 58, k: 3.1, target: [22, 8, 0], cy: 265 },
+    sub: 'Adulto mayor · caída de su propia altura · cadera derecha · solo inspección', pain: { v: 8, at: 'groinR', txt: 'Me duele mucho la ingle' },
+    variants: [{ id: 'pos', l: 'Fractura derecha', pos: 1 }],
+    result: { pos: ['Conducta', 'No se le pide que mueva la pierna ni se moviliza pasivamente: inmovilizar, analgesia y Rx AP de pelvis + AP y axial de cadera.'] },
+    steps: [
+      { ph: 'ins', t: 'Compare ambos miembros', d: 'Paciente en camilla, vista superior. Antes de tocar, compare siempre con el miembro sano.', pose: {},
+        lines: [{ from: 'ankleR', to: 'ankleL', c: '#d98a00', ext: 20 }] },
+      { ph: 'ins', t: '1 · Acortamiento', d: 'El miembro afectado se ve más corto: los maléolos no están a la misma altura.', pose: { R: { sh: 5 } },
+        lines: [{ from: 'ankleR', to: 'ankleL', c: '#e5484d', ext: 20 }], tags: [{ at: 'ankleR', txt: 'Más corto', dx: 60, dy: 50, c: '#e5484d' }] },
+      { ph: 'ins', t: '2 · Rotación externa', d: 'El pie cae hacia afuera: el borde lateral del pie toca la camilla.', pose: { R: { rot: -62 } }, dur: 1700,
+        tags: [{ at: 'toeR', txt: 'Pie hacia afuera', dx: 60, dy: 40, c: '#e5484d' }] },
+      { ph: 'ins', t: '3 · Abducción', d: 'El miembro se separa ligeramente de la línea media.', pose: { R: { abd: 10 } } },
+      { ph: 'ins', t: '4 · Rodilla en leve flexión', d: 'La rodilla queda discretamente flexionada.', pose: { R: { knee: 12, flex: 6 } },
+        tags: [{ at: 'kneeR', txt: 'Leve flexión', dx: 50, dy: -50, c: '#d98a00' }] }
+    ]
+  },
+
+  luxpost: {
+    name: 'Luxación posterior', group: 'Trauma · inspección', short: 'bañista sorprendida · 90 %', posture: 'supine', cam: { yaw: -26, pitch: 34, k: 3.1, target: [22, 10, 0], cy: 275 },
+    sub: 'Trauma de alta energía · cadera derecha · solo inspección', pain: { v: 8, at: 'groinR', txt: 'Me duele mucho la cadera' },
+    variants: [{ id: 'pos', l: 'Luxación posterior', pos: 1 }],
+    result: { pos: ['Bañista sorprendida', 'Flexión, aducción, rotación interna y acortamiento. No movilizar: urgencia, Rx AP de pelvis (cabeza femoral fuera del acetábulo, desplazada hacia arriba) y reducción precoz.'] },
+    steps: [
+      { ph: 'ins', t: 'Compare ambos miembros', d: 'Antes de tocar, observe la posición del miembro afectado frente al sano.', pose: {} },
+      { ph: 'ins', t: 'Leve flexión', d: 'La cadera queda en leve flexión, con la rodilla discretamente flexionada; el miembro sigue apoyado, no elevado.', pose: { R: { flex: 9, knee: 15 } }, tags: [{ at: 'kneeR', txt: 'Leve flexión', dx: 60, dy: -50, c: '#d98a00' }] },
+      { ph: 'ins', t: 'Aducción', d: 'La rodilla se cruza hacia la línea media.', pose: { R: { abd: -24 } }, tags: [{ at: 'kneeR', txt: 'Aducción', dx: 60, dy: -50, c: '#d98a00' }] },
+      { ph: 'ins', t: 'Rotación interna', d: 'El pie mira hacia adentro.', pose: { R: { rot: 34 } }, tags: [{ at: 'toeR', txt: 'Pie hacia adentro', dx: -40, dy: 60, c: '#d98a00' }] },
+      { ph: 'ins', t: 'Acortamiento', d: 'La cabeza femoral se desplaza hacia arriba y atrás: el miembro se acorta.', pose: { R: { sh: 5 } }, tags: [{ at: 'hipR', txt: 'Bañista sorprendida', dx: 70, dy: -70, c: '#e5484d' }] }
+    ]
+  },
+
+  luxant: {
+    name: 'Luxación anterior', group: 'Trauma · inspección', short: 'bañista impúdica · 10 %', posture: 'supine', cam: { yaw: -18, pitch: 48, k: 3.1, target: [22, 8, 0], cy: 270 },
+    sub: 'Trauma · cadera derecha · solo inspección', pain: { v: 8, at: 'groinR', txt: 'Me duele mucho la cadera' },
+    variants: [{ id: 'pos', l: 'Luxación anterior', pos: 1 }],
+    result: { pos: ['Bañista impúdica', 'Abducción y rotación externa del miembro afectado. No movilizar: urgencia y Rx AP de pelvis.'] },
+    steps: [
+      { ph: 'ins', t: 'Compare ambos miembros', d: 'Observe la posición del miembro afectado frente al sano.', pose: {} },
+      { ph: 'ins', t: 'Abducción', d: 'El miembro se separa de la línea media.', pose: { R: { abd: 22, flex: 14, knee: 16 } }, tags: [{ at: 'kneeR', txt: 'Abducción', dx: 60, dy: -50, c: '#d98a00' }] },
+      { ph: 'ins', t: 'Rotación externa', d: 'El pie y la rodilla miran hacia afuera.', pose: { R: { rot: -55 } }, tags: [{ at: 'toeR', txt: 'Pie hacia afuera', dx: 60, dy: 40, c: '#d98a00' }] }
+    ]
+  },
+
+  cerrado: {
+    name: 'Signo del libro cerrado', group: 'Trauma · pelvis', short: 'compresión lateral', posture: 'supine', cam: { yaw: -4, pitch: 70, k: 3.4, target: [4, 8, 0], cy: 270 },
+    sub: 'Trauma de alto impacto · sospecha de fractura de pelvis',
+    variants: [{ id: 'n', l: 'Negativo' }, { id: 'pos', l: '(+) Fractura de pelvis', pos: 1 }],
+    result: {
+      n: ['Negativo', 'Sin dolor ni crepitación a la compresión.'],
+      pos: ['Positivo', 'Dolor o crepitación: sospecha de ruptura del anillo pélvico. Riesgo de choque hemorrágico → estabilizar o fajar la pelvis. No repetir.']
+    },
+    steps: [
+      { ph: 'tra', t: 'Manos sobre ambas crestas ilíacas', d: 'El examinador apoya las palmas sobre la cara lateral de ambas crestas ilíacas.',
+        hands: [{ at: 'crestR', off: [-4, 0, 2], dir: [-1, .1, .4] }, { at: 'crestL', off: [4, 0, 2], dir: [1, .1, .4] }] },
+      { ph: 'tra', t: 'Compresión lateral, una sola vez', d: 'Presiona ambas crestas hacia la línea media, con suavidad y una sola vez.', dur: 1300,
+        hands: [{ at: 'crestR', off: [-3, 0, 2], dir: [-1, .1, .4] }, { at: 'crestL', off: [3, 0, 2], dir: [1, .1, .4] }],
+        arrows: [{ at: 'crestR', off: [-10, 0, 3], dir: [1, 0, 0], len: 18 }, { at: 'crestL', off: [10, 0, 3], dir: [-1, 0, 0], len: 18 }],
+        tags: [{ at: 'crestR', off: [-26, 0, 3], txt: 'Hacia adentro', dx: 80, dy: 50, c: '#2f6fd6' }],
+        v: { pos: { pain: { v: 9, at: 'pubis', txt: '¡Ay! Me duele toda la pelvis' }, tags: [{ at: 'crestR', off: [-26, 0, 3], txt: 'Hacia adentro', dx: 80, dy: 50, c: '#2f6fd6' }, { at: 'pubis', txt: 'Dolor / crepitación', dx: 90, dy: -20, c: '#e5484d' }] } } },
+      { ph: 'tra', t: 'No repetir · fajar', d: 'Si es positiva no se repite: se puede desplazar la fractura y aumentar el sangrado. Estabilizar o fajar la pelvis.',
+        v: { pos: { pain: { v: 6, at: 'pubis', txt: 'Me sigue doliendo' }, tags: [{ at: 'pelvis', txt: 'Fajar la pelvis', dx: 70, dy: -70, c: '#2f6fd6' }] } } }
+    ]
+  },
+
+  abierto: {
+    name: 'Signo del libro abierto', group: 'Trauma · pelvis', short: 'presión sobre EIAS', posture: 'supine', cam: { yaw: -4, pitch: 70, k: 3.4, target: [4, 8, 0], cy: 270 },
+    sub: 'Trauma de alto impacto · sospecha de fractura de pelvis',
+    variants: [{ id: 'n', l: 'Negativo' }, { id: 'pos', l: '(+) Fractura de pelvis', pos: 1 }],
+    result: {
+      n: ['Negativo', 'Sin dolor ni crepitación.'],
+      pos: ['Positivo', 'Dolor o crepitación: sospecha de fractura de pelvis. Estabilizar o fajar. Una sola vez y con suavidad.']
+    },
+    steps: [
+      { ph: 'tra', t: 'Manos sobre ambas EIAS', d: 'El examinador apoya las palmas sobre ambas espinas ilíacas anterosuperiores.',
+        hands: [{ at: 'asisR', off: [0, 0, 4], dir: [-.3, .2, .95] }, { at: 'asisL', off: [0, 0, 4], dir: [.3, .2, .95] }] },
+      { ph: 'tra', t: 'Presión hacia afuera y atrás', d: 'Presiona ambas EIAS hacia afuera y hacia atrás, una sola vez y con suavidad.', dur: 1300,
+        hands: [{ at: 'asisR', off: [0, 0, 3], dir: [-.3, .2, .95] }, { at: 'asisL', off: [0, 0, 3], dir: [.3, .2, .95] }],
+        arrows: [{ at: 'asisR', off: [-22, 0, 4], dir: [-1, 0, -.35], len: 16 }, { at: 'asisL', off: [22, 0, 4], dir: [1, 0, -.35], len: 16 }],
+        tags: [{ at: 'asisR', off: [-30, 0, 4], txt: 'Afuera y atrás', dx: 80, dy: 50, c: '#2f6fd6' }],
+        v: { pos: { pain: { v: 9, at: 'pubis', txt: '¡Ay! Me duele toda la pelvis' }, tags: [{ at: 'asisR', off: [-30, 0, 4], txt: 'Afuera y atrás', dx: 80, dy: 50, c: '#2f6fd6' }, { at: 'pubis', txt: 'Dolor / crepitación', dx: 90, dy: -20, c: '#e5484d' }] } } },
+      { ph: 'tra', t: 'No repetir · fajar', d: 'Si es positiva no se repite. Estabilizar o fajar la pelvis y solicitar Rx AP de pelvis.',
+        v: { pos: { pain: { v: 6, at: 'pubis', txt: 'Me sigue doliendo' }, tags: [{ at: 'pelvis', txt: 'Fajar la pelvis', dx: 70, dy: -70, c: '#2f6fd6' }] } } }
+    ]
+  },
+
+  drehmann: {
+    name: 'Signo de Drehmann', group: 'Pediatría', short: 'epifisiólisis', posture: 'supine', cam: { yaw: -30, pitch: 40, k: 3.1, target: [22, 14, 0], cy: 310 },
+    sub: 'Adolescente · cadera derecha',
+    variants: [{ id: 'n', l: 'Normal' }, { id: 'pos', l: '(+) Epifisiólisis', pos: 1 }],
+    result: {
+      n: ['Negativo', 'La cadera se flexiona en línea recta, sin rotación externa obligada.'],
+      pos: ['Positivo', 'Al flexionar, el muslo se va obligatoriamente a rotación externa y abducción: sospeche epifisiólisis de la cabeza femoral. El dolor suele referirse a rodilla o muslo.']
+    },
+    steps: [
+      { ph: 'act', t: 'Posición inicial', d: 'Decúbito supino, piernas extendidas.', pose: {} },
+      { ph: 'act', t: 'Comienza a flexionar la cadera', d: 'El adolescente flexiona activamente la cadera y la rodilla derechas.', pose: { R: { flex: 45, knee: 50 } }, dur: 1500,
+        v: { pos: { pose: { R: { rot: -22, abd: 10 } } } } },
+      { ph: 'act', t: 'Completa la flexión', d: 'Observe hacia dónde se va el muslo mientras flexiona.', pose: { R: { flex: 90, knee: 90 } }, dur: 1500,
+        v: { pos: { pose: { R: { rot: -45, abd: 24 } }, pain: { v: 4, at: 'kneeR', txt: 'Me duele la rodilla' }, tags: [{ at: 'kneeR', txt: 'Se va a rotación externa', dx: 60, dy: -60, c: '#e5484d' }] },
+          n: { tags: [{ at: 'kneeR', txt: 'Flexión en línea recta', dx: 60, dy: -60, c: '#1fae55' }] } } },
+      { ph: 'exa', t: 'El examinador extiende la pierna', d: 'Toma la rodilla y el tobillo y devuelve la pierna a la camilla.', pose: { R: { flex: 0, knee: 0, rot: 0, abd: 0 } },
+        hands: [{ at: 'kneeR', off: [0, 2, 6], dir: [-.4, .3, .9] }, { at: 'ankleR', off: [-5, 0, 0], dir: [-1, -.2, .2] }] },
+      { ph: 'exa', t: 'Flexión pasiva de la cadera', d: 'Flexiona pasivamente la cadera intentando mantener el muslo en línea recta.', pose: { R: { flex: 90, knee: 90 } }, dur: 2000,
+        hands: [{ at: 'kneeR', off: [0, 2, 6], dir: [-.4, .3, .9] }, { at: 'ankleR', off: [-5, 0, 0], dir: [-1, -.2, .2] }],
+        v: { pos: { pose: { R: { rot: -45, abd: 24 } }, pain: { v: 5, at: 'kneeR', txt: 'Me duele la rodilla y el muslo' }, tags: [{ at: 'kneeR', txt: 'Rotación externa obligada', dx: 60, dy: -60, c: '#e5484d' }] } } }
+    ]
+  }
+};
+const MENU = [
+  ['Sin trauma · cadera', ['faber', 'thomas', 'ober', 'fadir', 'trend']],
+  ['Trauma · inspección', ['fx', 'luxpost', 'luxant']],
+  ['Trauma · pelvis', ['cerrado', 'abierto']],
+  ['Pediatría', ['drehmann']]
+];
+
+/* ---------- Estado visual y transición ---------- */
+const keyOf = o => (o.at || o.from || '') + '|' + (o.to || '') + '|' + (o.txt || o.label || '') + '|' + (o.c || '');
+function fadeList(A = [], B = [], e) {
+  const out = [], ka = new Map(A.map(o => [keyOf(o), o]));
+  const kb = new Set(B.map(keyOf));
+  for (const o of B) out.push({ ...o, a: ka.has(keyOf(o)) ? 1 : e });
+  for (const o of A) if (!kb.has(keyOf(o))) out.push({ ...o, a: 1 - e });
+  return out;
+}
+function handsFade(A = [], B = [], e) {
+  const out = [], ka = new Map(A.map(o => [o.at, o]));
+  const kb = new Set(B.map(o => o.at));
+  for (const o of B) { const p = ka.get(o.at); out.push(p ? { ...o, off: lerpV(p.off || [0, 0, 0], o.off || [0, 0, 0], e), dir: lerpV(p.dir || [0, 0, 1], o.dir || [0, 0, 1], e), a: 1 } : { ...o, a: e }); }
+  for (const o of A) if (!kb.has(o.at)) out.push({ ...o, a: 1 - e });
+  return out;
+}
+function tween(A, B, e) {
+  const pa = A.pain || { v: 0 }, pb = B.pain || { v: 0 };
+  return {
+    pose: lerpPose(A.pose, B.pose, e),
+    hands: handsFade(A.hands, B.hands, e),
+    arrows: fadeList(A.arrows, B.arrows, e), tags: fadeList(A.tags, B.tags, e),
+    lines: fadeList(A.lines, B.lines, e), hi: fadeList(A.hi, B.hi, e),
+    pain: { v: pa.v + (pb.v - pa.v) * e, at: pb.v > 0 ? pb.at : pa.at, txt: pb.v > 0 ? pb.txt : pa.txt, show: pb.v > 0 ? Math.max(0, (e - .45) * 2) : Math.max(0, 1 - e * 2) * (pa.v > 0 ? 1 : 0) }
+  };
+}
+function resolveSteps(m, variant) {
+  const pose = deepMerge(basePose(), clone(m.base || {}));
+  return m.steps.map(st => {
+    const ov = (st.v && st.v[variant]) || {};
+    deepMerge(pose, clone(st.pose || {}));
+    deepMerge(pose, clone(ov.pose || {}));
+    const s = { ...st, ...ov };
+    return { ...s, state: { pose: clone(pose), hands: s.hands || [], arrows: s.arrows || [], tags: s.tags || [], lines: s.lines || [], hi: s.hi || [], pain: s.pain || m.pain || { v: 0 } } };
+  });
+}
+
+/* ---------- Escala EVA ---------- */
+function evaFace(v) {
+  const c = v < 3.5 ? '#1fae55' : v < 6.5 ? '#e0a400' : '#e5484d';
+  const m = 1 - v / 5; // curvatura de la boca
+  return `<circle cx="22" cy="22" r="20" fill="#fff" stroke="${c}" stroke-width="3"/><circle cx="15" cy="18" r="2.6" fill="${c}"/><circle cx="29" cy="18" r="2.6" fill="${c}"/>
+  ${v > 6 ? `<path d="M11 13 l7 3 M33 13 l-7 3" stroke="${c}" stroke-width="2.4" stroke-linecap="round"/>` : ''}
+  <path d="M13 ${29 - m * 2} Q22 ${29 + m * 5} 31 ${29 - m * 2}" fill="none" stroke="${c}" stroke-width="3" stroke-linecap="round"/>`;
+}
+const PAIN_SITE = { groinR: 'Ingle derecha → cadera', siR: 'Región glútea posterior → sacroilíaca', thighLatR: 'Cara lateral del muslo', kneeR: 'Rodilla / muslo (dolor referido)', pubis: 'Anillo pélvico', crestR: 'Cresta ilíaca' };
+
+/* ---------- Reproductor de maniobras ---------- */
+const Lab = {
+  init() {
+    this.stage = new Stage($('#labSvg'), { W: 800, H: 500, id: 'lab' });
+    this.speed = 1;
+    const menu = $('#labMenu');
+    menu.innerHTML = MENU.map(([g, ids]) => `<div class="menu-group"><h4>${g}</h4>${ids.map((id, i) => `<button class="mbtn" data-m="${id}"><span class="ix">${MAN[id].group === 'Sin trauma' ? i + 1 : i + 1}</span><span>${MAN[id].name}<small>${MAN[id].short}</small></span></button>`).join('')}</div>`).join('');
+    menu.addEventListener('click', e => { const b = e.target.closest('[data-m]'); if (b) this.load(b.dataset.m); });
+    $('#bPrev').onclick = () => { this.stop(); this.go(this.i - 1); };
+    $('#bNext').onclick = () => { this.stop(); this.go(this.i + 1); };
+    $('#bRe').onclick = () => { this.stop(); this.go(0, true); };
+    $('#bPlay').onclick = () => this.playing ? this.stop() : this.play();
+    $('#speed').oninput = e => this.speed = +e.target.value;
+    $$('[data-cam]').forEach(b => b.onclick = () => {
+      const m = MAN[this.id], c = { ...m.cam };
+      if (b.dataset.cam === 'top') { c.pitch = 80; c.yaw = m.posture === 'standing' ? 180 : -2; }
+      if (b.dataset.cam === 'side') { c.pitch = m.posture === 'standing' ? 4 : 6; c.yaw = m.posture === 'standing' ? 90 : 0; }
+      this.stage.setCam(c, true);
+    });
+    this.load('faber');
+  },
+  load(id, variant) {
+    this.stop();
+    this.id = id; const m = MAN[id];
+    $$('#labMenu .mbtn').forEach(b => b.classList.toggle('on', b.dataset.m === id));
+    $('#pTitle').textContent = m.name; $('#pSub').textContent = m.sub;
+    this.variant = variant || m.variants[m.variants.length > 1 ? 1 : 0].id;
+    $('#pVariants').innerHTML = m.variants.map(v => `<button data-v="${v.id}" class="${v.pos ? 'pos' : ''}">${v.l}</button>`).join('');
+    $$('#pVariants button').forEach(b => b.onclick = () => { this.variant = b.dataset.v; this.refreshVariant(); });
+    this.stage.posture = m.posture; this.stage.setCam(m.cam);
+    this.refreshVariant(true);
+  },
+  refreshVariant(reset) {
+    const m = MAN[this.id];
+    $$('#pVariants button').forEach(b => b.classList.toggle('on', b.dataset.v === this.variant));
+    this.steps = resolveSteps(m, this.variant);
+    this.buildTimeline();
+    if (reset || this.i == null) { this.cur = clone(this.steps[0].state); this.go(0, true); }
+    else this.go(this.i, false, true);
+  },
+  buildTimeline() {
+    const groups = []; this.steps.forEach((s, i) => { const g = groups[groups.length - 1]; if (g && g.ph === s.ph) g.ix.push(i); else groups.push({ ph: s.ph, ix: [i] }); });
+    $('#pTimeline').innerHTML = groups.map(g => `<div class="tl-group" style="--n:${g.ix.length}"><span class="tl-lbl" style="color:${PH[g.ph].col}">${PH[g.ph].t.replace('Fase ', '')}</span><div class="tl-steps">${g.ix.map(i => `<button class="tl-step" data-i="${i}" style="background:${PH[this.steps[i].ph].col}">${i + 1}${!MAN[this.id].pain && this.steps[i].state.pain.v >= 4 ? '<span class="pn">!</span>' : ''}</button>`).join('')}</div></div>`).join('');
+    $$('#pTimeline .tl-step').forEach(b => b.onclick = () => { this.stop(); this.go(+b.dataset.i); });
+  },
+  go(i, instant, sameStep) {
+    i = Math.max(0, Math.min(this.steps.length - 1, i));
+    const prev = this.i; this.i = i;
+    const s = this.steps[i], ph = PH[s.ph];
+    $$('#pTimeline .tl-step').forEach(b => { const k = +b.dataset.i; b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
+    $('#sN').textContent = i + 1; $('#sN').style.background = ph.col;
+    $('#sWho').textContent = ph.who; $('#sWho').style.color = ph.col;
+    $('#sT').textContent = s.t; $('#sD').textContent = s.d;
+    const badge = $('#pBadge'); badge.className = 'phase-badge ' + ph.cls;
+    $('#pBadgeIc').innerHTML = ph.ic; $('#pBadgeT').textContent = ph.t; $('#pBadgeS').textContent = ph.s;
+    $('#bPrev').disabled = i === 0;
+    // resultado
+    const m = MAN[this.id], r = m.result[this.variant], last = i === this.steps.length - 1;
+    const res = $('#pResult'); const isPos = (m.variants.find(v => v.id === this.variant) || {}).pos;
+    res.className = 'result' + (last ? ' show ' + (isPos ? 'pos' : 'neg') : '');
+    res.innerHTML = r ? `<b>${r[0]}</b>${r[1]}` : '';
+    // animación
+    const from = clone(this.cur), to = s.state, dur = instant ? 0 : (s.dur || 1300) / this.speed;
+    cancelAnimationFrame(this.raf);
+    const t0 = performance.now();
+    const tick = now => {
+      const t = dur ? Math.min(1, (now - t0) / dur) : 1, e = ease(t);
+      const st = tween(from, to, e);
+      this.stage.render(st); this.eva(st.pain, to.pain);
+      $('#pProg').style.width = ((i + t) / this.steps.length * 100) + '%';
+      if (t < 1) this.raf = requestAnimationFrame(tick);
+      else { this.cur = clone(to); this.stage.render(to); this.eva(to.pain, to.pain); if (this.playing) this.hold = setTimeout(() => { if (this.i < this.steps.length - 1) this.go(this.i + 1); else this.stop(); }, (s.hold || 1700) / this.speed); }
+    };
+    this.raf = requestAnimationFrame(tick);
+    void prev; void sameStep;
+  },
+  eva(p, target) {
+    const v = Math.max(0, p.v || 0);
+    $('#evaVal').textContent = Math.round(v);
+    $('#evaVal').style.color = v < 3.5 ? 'var(--g2)' : v < 6.5 ? '#c98f00' : 'var(--pain)';
+    $('#evaKnob').style.left = (v * 10) + '%';
+    $('#evaFace').innerHTML = evaFace(v);
+    $('#evaWhere').innerHTML = target.v > 0 ? `<span style="color:var(--pain)"><i class="dot" style="background:var(--pain);margin-right:6px"></i>${PAIN_SITE[target.at] || ''}</span>` : '<span class="muted">Sin dolor</span>';
+  },
+  play() {
+    this.playing = true; $('#playTxt').textContent = 'Pausa'; $('#playIc').innerHTML = '<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" fill="currentColor"/>';
+    if (this.i >= this.steps.length - 1) this.go(0); else this.go(this.i + 1);
+  },
+  stop() {
+    this.playing = false; clearTimeout(this.hold);
+    $('#playTxt').textContent = 'Reproducir todo'; $('#playIc').innerHTML = '<path d="M4 2.5v11l9-5.5z" fill="currentColor"/>';
+  }
+};
+
+/* ---------- Portada: animación en bucle ---------- */
+function heroLoop() {
+  const st = new Stage($('#heroSvg'), { W: 640, H: 400, id: 'hero' });
+  st.posture = 'supine'; st.setCam({ yaw: -24, pitch: 30, k: 2.35, target: [8, 10, 0], cy: 225 });
+  const seq = resolveSteps(MAN.faber, 'hip').map(s => s.state);
+  let i = 0, cur = clone(seq[0]);
+  const run = () => {
+    const to = seq[i], from = clone(cur), t0 = performance.now(), dur = 1500;
+    const tick = now => { const t = Math.min(1, (now - t0) / dur); st.render(tween(from, to, ease(t))); if (t < 1) requestAnimationFrame(tick); else { cur = clone(to); i = (i + 1) % seq.length; setTimeout(run, i === 1 ? 1600 : 1300); } };
+    requestAnimationFrame(tick);
+  };
+  run();
+}
+
+/* ---------- Músculos en acción ---------- */
+const MUS = [
+  { id: 'flex', n: 'Flexores', m: 'Iliopsoas · recto femoral · sartorio · TFL', mv: 'Flexión de cadera', cam: { yaw: 62, pitch: 8 }, A: {}, B: { R: { flex: 95, knee: 90 } },
+    hi: [{ from: 'lumbar', to: 'lesserR', w: 8, c: '#ff8a1f', n: 'Iliopsoas' }, { from: 'asisR', to: 'kneeAntR', w: 6.5, c: '#e5484d', n: 'Recto femoral' }, { from: 'asisR', to: 'kneeMedR', w: 3.5, c: '#a855f7', n: 'Sartorio' }, { from: 'asisR', to: 'trochR', w: 5, c: '#2f6fd6', n: 'TFL' }],
+    note: 'Iliopsoas = psoas mayor + ilíaco → trocánter menor.' },
+  { id: 'abd', n: 'Abductores', m: 'Glúteo medio · glúteo menor', mv: 'Abducción', cam: { yaw: 200, pitch: 6 }, A: {}, B: { R: { abd: 40 }, tl: 4 },
+    hi: [{ from: 'gmedR', to: 'trochR', w: 11, c: '#ff8a1f', n: 'Glúteo medio' }, { from: 'asisR', to: 'trochR', w: 5, c: '#e5484d', n: 'Glúteo menor' }],
+    note: 'Glúteo medio: ilion → trocánter mayor. Estabiliza la pelvis en el apoyo monopodal.' },
+  { id: 'ext', n: 'Extensores', m: 'Glúteo mayor · isquiotibiales', mv: 'Extensión', cam: { yaw: 130, pitch: 6 }, A: { R: { flex: 10 } }, B: { R: { flex: -28, knee: 15 }, tf: 6 },
+    hi: [{ from: 'siR', to: 'glutTubR', w: 13, c: '#ff8a1f', n: 'Glúteo mayor' }, { from: 'ischiumR', to: 'kneePostR', w: 7, c: '#e5484d', n: 'Isquiotibiales' }],
+    note: 'Glúteo mayor: sacro e ilion posterior → tuberosidad glútea y cintilla iliotibial. Extensión y rotación externa.' },
+  { id: 'add', n: 'Aductores', m: 'Aductores · grácil', mv: 'Aducción', cam: { yaw: -10, pitch: 6 }, A: { R: { abd: 30 } }, B: { R: { abd: -8, flex: 12 } },
+    hi: [{ from: 'pubis', to: 'thighMedR', w: 9, c: '#ff8a1f', n: 'Aductores' }, { from: 'pubis', to: 'kneeMedR', w: 3.5, c: '#a855f7', n: 'Grácil' }],
+    note: 'Llevan el muslo hacia la línea media.' },
+  { id: 'tfl', n: 'Tensor de la fascia lata', m: 'Flexión · abducción · RI', mv: 'Flexión + abducción + RI', cam: { yaw: 40, pitch: 8 }, A: {}, B: { R: { flex: 35, abd: 22, rot: 18 } },
+    hi: [{ from: 'asisR', to: 'trochR', w: 6, c: '#2f6fd6', n: 'TFL' }, { from: 'trochR', to: 'kneeLatR', w: 3, c: '#16a3a3', n: 'Cintilla iliotibial' }],
+    note: 'Tensa la cintilla iliotibial (relacionado con el test de Ober).' }
+];
+function muscles() {
+  const st = new Stage($('#musSvg'), { W: 640, H: 520, id: 'mus' });
+  st.posture = 'standing';
+  let cur = MUS[0], t0 = performance.now(), camT = 0;
+  const list = $('#musList');
+  list.innerHTML = MUS.map(m => `<div class="mcard" data-id="${m.id}"><h4>${m.n}<span class="pill" style="background:var(--gl);color:var(--g2)">${m.mv}</span></h4><p>${m.m}</p><p style="margin-top:6px">${m.hi.map(h => `<span style="white-space:nowrap;margin-right:10px;font-size:12.5px;font-weight:600"><i class="swatch" style="background:${h.c}"></i>${h.n}</span>`).join('')}</p><p class="muted" style="font-size:12.5px;margin-top:4px">${m.note}</p></div>`).join('');
+  const sel = id => { cur = MUS.find(m => m.id === id); $$('#musList .mcard').forEach(c => c.classList.toggle('on', c.dataset.id === id)); st.setCam({ ...cur.cam, k: 2.3, target: [0, 90, 0], cy: 275 }, camT++ > 0); $('#musBadgeTxt').textContent = cur.mv; t0 = performance.now(); };
+  list.addEventListener('click', e => { const c = e.target.closest('.mcard'); if (c) sel(c.dataset.id); });
+  sel('flex');
+  const loop = now => {
+    const ph = ((now - t0) / 2600) % 1, e = (1 - Math.cos(ph * 2 * Math.PI)) / 2;
+    const A = deepMerge(basePose(), clone(cur.A)), B = deepMerge(basePose(), clone(cur.B));
+    const pose = lerpPose(A, B, ease(e));
+    const hi = cur.hi.map(h => ({ t: 'cap', from: h.from, to: h.to, w: h.w * (1 + .25 * e), c: h.c }));
+    const tags = cur.hi.slice(0, 2).map((h, i) => ({ at: h.from, txt: h.n, dx: i ? -70 : 70, dy: i ? 50 : -50, c: h.c }));
+    st.render({ pose, hi, tags });
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+}
+
+/* ---------- Marcha ---------- */
+const GAITS = [
+  { id: 'norm', tag: 'Ref.', n: 'Marcha normal', d: 'Pelvis estable, apoyo simétrico.', cam: 'back', col: '#0b3b36' },
+  { id: 'trend', tag: 'Trendelenburg (+)', n: 'Marcha de Trendelenburg', d: 'Debilidad del glúteo medio derecho: la pelvis cae del lado contrario en cada apoyo derecho.', cam: 'back', col: '#e5484d' },
+  { id: 'antal', tag: 'FADIR · FABER (+)', n: 'Marcha antálgica', d: 'Dolor intraarticular o sacroilíaco: acorta la fase de apoyo del lado doloroso.', cam: 'side', col: '#e0a400' },
+  { id: 'flex', tag: 'Thomas (+)', n: 'Marcha con cadera en flexión', d: 'Flexores acortados: la cadera no se extiende y aumenta la lordosis lumbar.', cam: 'side', col: '#a855f7' },
+  { id: 'ober', tag: 'Ober (+)', n: 'Alteración del paso', d: 'Cintilla iliotibial tensa: limita la aducción, el miembro avanza separado.', cam: 'back', col: '#16a3a3' },
+  { id: 'fx', tag: 'Fractura / luxación', n: 'No logra apoyar', d: 'Fractura o luxación de cadera: no hay apoyo del miembro afectado.', cam: 'side', col: '#5f7f78' }
+];
+function gaitLeg(q) {
+  return { flex: 10 + 20 * Math.cos(2 * Math.PI * q), knee: q < .6 ? 14 * Math.sin(Math.PI * q / .6) : 62 * Math.sin(Math.PI * (q - .6) / .4) };
+}
+function gaitPose(type, t) {
+  // t ∈ [0,1): ciclo de la pierna derecha (0 = contacto inicial derecho)
+  let ph = t;
+  if (type === 'antal') ph = t < .4 ? t / .4 * .5 : .5 + (t - .4) / .6 * .5; // apoyo derecho acortado
+  const p = basePose(); p.cmp = 1;
+  const r = gaitLeg(ph), l = gaitLeg((ph + .5) % 1);
+  Object.assign(p.R, r); Object.assign(p.L, l);
+  const stR = ph < .5, w = Math.sin(Math.PI * ((ph % .5) / .5));
+  p.pt = stR ? -3 * w : 3 * w;
+  p.aR.flex = 18 * Math.cos(2 * Math.PI * (ph + .5)); p.aL.flex = 18 * Math.cos(2 * Math.PI * ph); p.aR.elb = p.aL.elb = 18;
+  let pain = { v: 0 }, tags = [], lines = [{ from: 'crestR', to: 'crestL', c: '#1fae55', ext: 35 }], hi = [];
+  if (type === 'trend') {
+    p.pt = stR ? -11 * w : 3 * w; p.tl = stR ? 5 * w : 0;
+    lines = [{ from: 'crestR', to: 'crestL', c: stR && w > .4 ? '#e5484d' : '#1fae55', ext: 35 }];
+    hi = [{ t: 'cap', from: 'gmedR', to: 'trochR', w: 10, c: stR ? '#e5484d' : '#ff8a1f', a: .8 }];
+    if (stR && w > .5) tags = [{ at: 'crestL', txt: 'Cae la pelvis', dx: 60, dy: -40, c: '#e5484d' }];
+  }
+  if (type === 'antal') {
+    p.tl = stR ? 5 * w : 0;
+    if (stR) pain = { v: 6 * w, at: 'groinR', txt: '¡Ay!', show: w };
+    lines = [];
+  }
+  if (type === 'flex') {
+    p.R.flex = Math.max(16, p.R.flex); p.R.knee = Math.max(p.R.knee, 14); p.tf = 9; p.pp = -6;
+    lines = []; tags = [{ at: 'lumbar', txt: 'Aumenta la lordosis lumbar', dx: -80, dy: -30, c: '#a855f7' }];
+    hi = [{ t: 'cap', from: 'lumbar', to: 'lesserR', w: 7, c: '#a855f7', a: .8 }];
+  }
+  if (type === 'ober') { p.R.abd = 7 + 2 * Math.sin(2 * Math.PI * ph); hi = [{ t: 'cap', from: 'trochR', to: 'kneeLatR', w: 3.5, c: '#16a3a3', a: .9 }]; tags = [{ at: 'kneeLatR', txt: 'No logra aducir', dx: -80, dy: 20, c: '#16a3a3' }]; }
+  if (type === 'fx') {
+    const b = basePose(); Object.assign(b.R, { flex: 22, knee: 48, rot: -25 }); b.L.knee = 6; b.aR.abd = 25; b.aL.abd = 25;
+    return { pose: b, pain: { v: 7, at: 'groinR', txt: 'No puedo apoyar', show: 1 }, tags: [{ at: 'ankleR', txt: 'Sin apoyo', dx: 60, dy: 20, c: '#5f7f78' }] };
+  }
+  return { pose: p, pain, tags, lines, hi, stR };
+}
+function gait() {
+  const st = new Stage($('#gaitSvg'), { W: 640, H: 500, id: 'gait' });
+  st.posture = 'standing';
+  const CAMS = { back: { yaw: 180, pitch: 5 }, side: { yaw: 90, pitch: 5 }, front: { yaw: 0, pitch: 5 } };
+  let type = 'trend', paused = false, phase = 0, last = performance.now(), speed = .8;
+  $('#gaitList').innerHTML = GAITS.map(g => `<div class="gcard" data-g="${g.id}"><span class="tag" style="background:${g.col}">${g.tag}</span><div><h4>${g.n}</h4><p>${g.d}</p></div></div>`).join('');
+  const sel = id => { type = id; const g = GAITS.find(x => x.id === id); $$('#gaitList .gcard').forEach(c => c.classList.toggle('on', c.dataset.g === id)); st.setCam({ ...CAMS[g.cam], k: 2.25, target: [0, 92, 0], cy: 262 }, true); $('#gaitBadgeT').textContent = g.n; $('#gaitBadgeS').textContent = g.tag; $('#gaitBadge').style.background = g.col; };
+  $('#gaitList').addEventListener('click', e => { const c = e.target.closest('.gcard'); if (c) sel(c.dataset.g); });
+  $$('[data-gcam]').forEach(b => b.onclick = () => st.setCam({ ...CAMS[b.dataset.gcam], k: 2.25, target: [0, 92, 0], cy: 262 }, true));
+  $('#gPause').onclick = () => { paused = !paused; $('#gPause').textContent = paused ? 'Continuar' : 'Pausa'; };
+  $('#gSpeed').oninput = e => speed = +e.target.value;
+  st.setCam({ ...CAMS.back, k: 2.25, target: [0, 92, 0], cy: 262 });
+  sel('trend');
+  const loop = now => {
+    const dt = now - last; last = now;
+    if (!paused) phase = (phase + dt / 1300 * speed) % 1;
+    const g = gaitPose(type, phase);
+    st.render(g);
+    $('#gPhase').textContent = type === 'fx' ? 'Sin ciclo de marcha' : (g.stR ? 'Apoyo sobre la pierna derecha' : 'Apoyo sobre la pierna izquierda');
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+}
+
+/* ---------- Pelvis (SVG anatómico) ---------- */
+const BONES = {
+  ilion: { n: 'Ilion', c: '#f1dfc0', d: 'Hueso ancho superior del coxal. Su borde superior es la cresta ilíaca y por delante termina en la EIAS (espina ilíaca anterosuperior).', p: 'M262,150 C236,120 196,96 150,92 C112,90 84,104 78,132 C72,160 92,190 120,214 C140,232 158,250 168,268 L212,264 C222,236 238,206 262,190 Z', off: [-34, -40] },
+  isquion: { n: 'Isquion', c: '#ead2ad', d: 'Porción posteroinferior del coxal; su tuberosidad es el apoyo al sentarse y el origen de los isquiotibiales.', p: 'M164,282 C150,312 156,350 182,366 C204,378 236,364 254,322 C244,312 232,304 214,300 C196,300 180,292 172,280 Z', off: [-40, 34] },
+  pubis: { n: 'Pubis', c: '#e3c79c', d: 'Porción anteroinferior del coxal. Ambos pubis se unen en la línea media en la sínfisis del pubis.', p: 'M206,270 C232,268 262,282 292,296 L296,300 L296,338 C280,334 266,330 254,322 C246,306 232,296 214,296 C210,288 206,280 206,270 Z', off: [36, 24] },
+  sacro: { n: 'Sacro', c: '#e7d6b8', d: 'Cierra la pelvis por detrás y se articula con ambos iliones en las articulaciones sacroilíacas.', p: 'M252,140 C270,132 330,132 348,140 L340,196 C332,236 316,268 300,288 C284,268 268,236 260,196 Z', center: 1 },
+  coccix: { n: 'Cóccix', c: '#dcc6a2', d: 'Extremo inferior de la columna, por debajo del sacro.', p: 'M292,288 L308,288 L304,314 L296,314 Z', center: 1 }
+};
+function pelvisSvg() {
+  const svg = $('#pelvisSvg');
+  const side = (mir) => Object.entries(BONES).filter(([, b]) => !b.center).map(([k, b]) => `<path class="bone b-${k}" data-b="${k}" d="${b.p}" fill="${b.c}" stroke="#8a6a45" stroke-width="2" ${mir ? '' : ''}/>`).join('');
+  const fem = `<g opacity=".28"><circle cx="188" cy="272" r="22" fill="#cfd8d4"/><path d="M176,286 L120,330 L122,410 L160,410 L160,345 L196,300 Z" fill="#cfd8d4"/></g>`;
+  const half = mir => `<g class="half"${mir ? ' transform="translate(600,0) scale(-1,1)"' : ''}>${fem}${side(mir)}
+    <ellipse class="obt" cx="214" cy="326" rx="20" ry="25" transform="rotate(-25 214 326)" fill="#f5faf7" stroke="#8a6a45" stroke-width="2"/>
+    <g class="acet"><circle cx="188" cy="272" r="25" fill="#c9a774" stroke="#7a5a35" stroke-width="2.5"/><circle cx="188" cy="272" r="15" fill="#b58f5c" opacity=".6"/></g>
+    <line x1="255" y1="148" x2="262" y2="198" stroke="#4fb6d6" stroke-width="5" stroke-linecap="round" class="sij"/></g>`;
+  const L = (x, y, tx, ty, t, anchor) => (anchor = tx < x ? 'end' : 'start', `<g class="lab"><line x1="${x}" y1="${y}" x2="${tx}" y2="${ty}" stroke="#0b3b36" stroke-width="1.3"/><circle cx="${x}" cy="${y}" r="3" fill="#0b3b36"/><text x="${tx + (anchor === 'end' ? -4 : 4)}" y="${ty + 4}" font-size="13" font-weight="700" fill="#0b3b36" text-anchor="${anchor}">${t}</text></g>`);
+  svg.innerHTML = `${half(0)}${half(1)}
+    ${['sacro', 'coccix'].map(k => `<path class="bone b-${k}" data-b="${k}" d="${BONES[k].p}" fill="${BONES[k].c}" stroke="#8a6a45" stroke-width="2"/>`).join('')}
+    <g fill="#c9a774" opacity=".7"><circle cx="286" cy="165" r="5"/><circle cx="314" cy="165" r="5"/><circle cx="289" cy="195" r="4.5"/><circle cx="311" cy="195" r="4.5"/><circle cx="292" cy="224" r="4"/><circle cx="308" cy="224" r="4"/></g>
+    <rect x="295" y="298" width="10" height="40" rx="4" fill="#4fb6d6"/>
+    <g id="pLabels">
+      ${L(118, 120, 40, 60, 'Ilion', 'start')}${L(150, 94, 168, 40, 'Cresta ilíaca')}${L(84, 168, 30, 200, 'EIAS')}
+      ${L(188, 272, 60, 262, 'Acetábulo')}${L(182, 360, 110, 392, 'Isquion')}${L(250, 300, 236, 404, 'Agujero obturador')}
+      ${L(410, 320, 470, 392, 'Pubis')}${L(300, 318, 360, 410, 'Sínfisis del pubis')}${L(330, 170, 450, 74, 'Sacro')}${L(300, 304, 360, 270, 'Cóccix')}${L(342, 175, 500, 150, 'Art. sacroilíaca')}
+    </g>`;
+  let labels = true;
+  $('#btnLabels').classList.add('on');
+  $('#btnLabels').onclick = () => { labels = !labels; $('#pLabels').style.display = labels ? '' : 'none'; $('#btnLabels').classList.toggle('on', labels); };
+  svg.addEventListener('click', e => {
+    const b = e.target.closest('.bone'); if (!b) return;
+    const k = b.dataset.b, B = BONES[k];
+    svg.classList.add('dim'); $$('#pelvisSvg .bone').forEach(x => x.classList.toggle('hl', x.dataset.b === k));
+    $('#pelvisInfo').innerHTML = `<h4>${B.n}</h4><p>${B.d}</p>`;
+  });
+  svg.addEventListener('dblclick', () => svg.classList.remove('dim'));
+  $('#btnFuse').onclick = () => {
+    const parts = ['ilion', 'isquion', 'pubis'];
+    $$('#pelvisSvg .acet').forEach(a => { a.style.transition = 'none'; a.style.opacity = 0; });
+    svg.classList.remove('dim');
+    parts.forEach(k => $$('#pelvisSvg .b-' + k).forEach(el => { el.style.transition = 'none'; el.style.transform = `translate(${BONES[k].off[0]}px,${BONES[k].off[1]}px)`; }));
+    $('#pelvisInfo').innerHTML = '<h4>Formación del acetábulo</h4><p>Ilion, isquion y pubis se separan y luego convergen: los tres se unen en el acetábulo, la cavidad que recibe la cabeza femoral.</p>';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      parts.forEach((k, i) => $$('#pelvisSvg .b-' + k).forEach(el => { el.style.transition = `transform 1.3s cubic-bezier(.6,0,.3,1) ${.4 + i * .35}s`; el.style.transform = 'translate(0,0)'; }));
+      $$('#pelvisSvg .acet').forEach(a => { a.style.transition = 'opacity .8s 2.2s'; a.style.opacity = 1; });
+    }));
+  };
+}
+
+/* ---------- Corte coronal de la cadera ---------- */
+function hipSvg() {
+  const svg = $('#hipSvg');
+  const C = [330, 175];
+  svg.innerHTML = `
+  <g class="ly-bone"><path d="M248,148 A84,84 0 0 1 404,220 L414,300 L600,300 L600,0 L120,0 L150,90 C190,120 220,134 248,148 Z" fill="#efe0c4" stroke="#8a6a45" stroke-width="2.5"/>
+    <text x="300" y="50" font-size="15" font-weight="800" fill="#7a5a35">Ilion</text></g>
+  <g class="ly-cart"><path d="M253,140 A80,80 0 0 1 400,214" fill="none" stroke="#8fd3ea" stroke-width="7"/></g>
+  <g class="ly-lab"><path d="M248,148 L232,166 L256,160 Z" fill="#2f6fd6"/><path d="M404,220 L420,234 L398,234 Z" fill="#2f6fd6"/></g>
+  <g id="femur" style="transform-origin:${C[0]}px ${C[1]}px;transition:transform .25s">
+    <path d="M290,130 C250,150 205,170 180,176 C164,166 146,172 142,192 C140,226 152,262 160,300 L172,440 L232,440 L222,334 C236,328 248,318 244,304 C238,294 230,292 224,286 C254,264 286,248 312,236 Z" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+    <circle cx="${C[0]}" cy="${C[1]}" r="70" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+    <g class="ly-cart"><path d="M262,150 A70,70 0 0 1 398,196" fill="none" stroke="#8fd3ea" stroke-width="7" transform="translate(0,4)"/></g>
+    <path d="M196,184 L196,430" stroke="#e8d5b0" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g class="ly-cap"><path d="M228,160 C190,190 170,230 186,300 M420,240 C400,270 300,300 238,300" fill="none" stroke="#1fae55" stroke-width="5" stroke-dasharray="10 7" stroke-linecap="round"/></g>
+  <g class="ly-txt" font-size="13" font-weight="700" fill="#0b3b36">
+    <text x="420" y="160">Acetábulo</text><line x1="416" y1="156" x2="392" y2="170" stroke="#0b3b36"/>
+    <text x="300" y="185" text-anchor="middle" font-size="15">Cabeza femoral</text>
+    <text x="250" y="230" text-anchor="middle">Cuello</text>
+    <text x="40" y="196">Trocánter mayor</text><line x1="140" y1="192" x2="152" y2="192" stroke="#0b3b36"/>
+    <text x="262" y="330">Trocánter menor</text>
+    <text x="236" y="420">Diáfisis</text>
+    <text x="150" y="130" fill="#2f6fd6">Labrum</text><line x1="196" y1="134" x2="236" y2="158" stroke="#2f6fd6"/>
+    <text x="440" y="262" fill="#1fae55">Cápsula</text>
+    <text x="440" y="200" fill="#2a8fb3">Cartílago articular</text><line x1="438" y1="196" x2="404" y2="200" stroke="#2a8fb3"/>
+  </g>`;
+  const layers = [['ly-bone', 'Hueso', '#efe0c4'], ['ly-cart', 'Cartílago', '#8fd3ea'], ['ly-lab', 'Labrum', '#2f6fd6'], ['ly-cap', 'Cápsula', '#1fae55'], ['ly-txt', 'Etiquetas', '#0b3b36']];
+  $('#hipLayers').innerHTML = layers.map(([c, n, col]) => `<button class="tog" data-ly="${c}"><i style="background:${col}"></i>${n}</button>`).join('');
+  $$('#hipLayers .tog').forEach(b => b.onclick = () => { b.classList.toggle('off'); $$('#hipSvg .' + b.dataset.ly).forEach(g => g.style.display = b.classList.contains('off') ? 'none' : ''); });
+  const fem = $('#femur'), rng = $('#hipAng');
+  const set = a => fem.style.transform = `rotate(${a}deg)`;
+  rng.oninput = () => set(+rng.value);
+  let swing = null;
+  $('#btnSwing').onclick = () => {
+    if (swing) { cancelAnimationFrame(swing); swing = null; $('#btnSwing').classList.remove('on'); return; }
+    $('#btnSwing').classList.add('on'); const t0 = performance.now();
+    fem.style.transition = 'none';
+    const f = now => { const a = 12 + 24 * Math.sin((now - t0) / 700); set(a); rng.value = a; swing = requestAnimationFrame(f); };
+    swing = requestAnimationFrame(f);
+  };
+}
+
+/* ---------- Pinzamiento femoroacetabular ---------- */
+function fai() {
+  const svg = $('#faiSvg'); const C = [300, 190];
+  let type = 'cam';
+  const types = [['norm', 'Normal'], ['cam', 'CAM · femoral'], ['pincer', 'PINCER · acetabular']];
+  $('#faiTabs').innerHTML = types.map(([k, n]) => `<button class="tab" data-t="${k}">${n}</button>`).join('');
+  const draw = (ang, hit) => {
+    const camBump = type === 'cam' ? `<path d="M226,166 C222,140 246,130 262,140 L254,162 Z" fill="${hit ? '#ff9c9c' : '#ffb347'}" stroke="#b5651d" stroke-width="2"/>` : '';
+    const pincer = type === 'pincer' ? `<path d="M238,167 A66,66 0 0 0 228,212 L212,206 L220,160 Z" fill="${hit ? '#ff9c9c' : '#ffb347'}" stroke="#b5651d" stroke-width="2"/>` : '';
+    const contact = type === 'cam' ? [236, 160] : [226, 198];
+    svg.innerHTML = `
+      <path d="M238,167 A66,66 0 1 1 350.6,232.4 L360,300 L600,300 L600,30 L90,30 L120,120 C160,150 210,150 238,167 Z" fill="#efe0c4" stroke="#8a6a45" stroke-width="2.5"/>
+      ${pincer}
+      <path d="M238,167 L224,178 L242,180 Z" fill="#2f6fd6"/>
+      <g transform="rotate(${ang} ${C[0]} ${C[1]})">
+        <path d="M262,148 C226,162 196,182 176,190 C160,182 144,190 142,206 C140,236 150,262 158,300 L168,420 L226,420 L216,330 C230,324 240,314 236,300 C230,290 222,288 218,284 C244,266 272,252 296,244 Z" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+        <circle cx="${C[0]}" cy="${C[1]}" r="58" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+        ${camBump}
+      </g>
+      ${hit && type !== 'norm' ? `<g class="painpulse" style="transform-origin:${contact[0]}px ${contact[1]}px"><circle cx="${contact[0]}" cy="${contact[1]}" r="34" fill="url(#faiGrad)"/></g><text x="${contact[0] - 30}" y="${contact[1] - 44}" font-size="16" font-weight="800" fill="#e5484d" text-anchor="middle">¡Choque!</text>` : ''}
+      <defs><radialGradient id="faiGrad"><stop offset="0" stop-color="#ff2d2d" stop-opacity=".95"/><stop offset="1" stop-color="#ff4d4d" stop-opacity="0"/></radialGradient></defs>
+      <text x="470" y="80" font-size="14" font-weight="800" fill="#7a5a35">Acetábulo</text>
+      <text x="300" y="196" font-size="14" font-weight="700" fill="#7a5a35" text-anchor="middle">Cabeza</text>
+      ${type === 'cam' ? '<text x="150" y="128" font-size="14" font-weight="800" fill="#b5651d">Giba (CAM)</text>' : ''}
+      ${type === 'pincer' ? '<text x="110" y="160" font-size="14" font-weight="800" fill="#b5651d">Sobrecobertura</text>' : ''}
+      <text x="30" y="400" font-size="12.5" fill="#5f7f78">Esquema · el giro del fémur representa flexión + rotación interna</text>`;
+  };
+  const LIM = { norm: 38, cam: 17, pincer: 15 };
+  const sel = k => { type = k; $$('#faiTabs .tab').forEach(b => b.classList.toggle('on', b.dataset.t === k)); draw(0, false); $('#faiMsg').textContent = k === 'norm' ? 'Cabeza esférica · cobertura adecuada' : k === 'cam' ? 'Giba en la unión cabeza-cuello' : 'Sobrecobertura del acetábulo'; };
+  $('#faiTabs').addEventListener('click', e => { const b = e.target.closest('[data-t]'); if (b) sel(b.dataset.t); });
+  sel('cam');
+  let busy = false;
+  $('#faiPlay').onclick = () => {
+    if (busy) return; busy = true;
+    const lim = LIM[type], t0 = performance.now(), up = 1300, hold = 1300;
+    const f = now => {
+      const t = now - t0; let a, hit = false;
+      if (t < up) a = lim * ease(t / up);
+      else if (t < up + hold) { a = lim + (type === 'norm' ? 0 : Math.sin((t - up) / 40) * .6); hit = type !== 'norm'; }
+      else a = lim * (1 - ease(Math.min(1, (t - up - hold) / 900)));
+      draw(a, hit);
+      $('#faiMsg').innerHTML = hit ? '<b style="color:var(--pain)">Dolor inguinal: el cuello choca con el reborde acetabular</b>' : (type === 'norm' && t > up && t < up + hold ? '<b style="color:var(--g2)">Rango completo, sin choque</b>' : '');
+      if (t < up + hold + 900) requestAnimationFrame(f); else busy = false;
+    };
+    requestAnimationFrame(f);
+  };
+}
+
+/* ---------- Anamnesis ---------- */
+function anamnesis() {
+  const items = [
+    ['1', 'Tiempo de evolución', '¿Desde cuándo? <b>Agudo</b> (trauma, infección) vs. <b>crónico</b> (degenerativo). ¿Es unilateral o bilateral?'],
+    ['2', 'Tipo o carácter', '¿Punzante, sordo, urente? El dolor <b>mecánico</b> empeora con el uso; el <b>inflamatorio</b> se acompaña de rigidez matinal.'],
+    ['3', 'Intensidad', 'Escala visual análoga (EVA) de 0 a 10. ¿Le impide apoyar o caminar?'],
+    ['4', 'Irradiación', 'La cadera suele doler en la <b>ingle</b>. Glúteo posterior: sacroilíaca o columna. En niños, el dolor puede referirse a la <b>rodilla</b>.'],
+    ['5', 'Calmantes', '¿Mejora con reposo, analgésicos, calor? ¿Qué posición alivia?'],
+    ['6', 'Agravantes', '¿Empeora al caminar, subir escaleras, sentarse, cruzar la pierna, con flexión + rotación interna?']
+  ];
+  $('#anamCards').innerHTML = items.map(([n, h, b]) => `<div class="flip"><div class="flip-in"><div class="flip-f"><span class="n">${n}</span><h4>${h}</h4><span class="hint">Toque para ver qué preguntar</span></div><div class="flip-b"><span class="lbl" style="color:var(--g)">${h}</span><p>${b}</p></div></div></div>`).join('');
+  $$('#anamCards .flip').forEach(f => f.onclick = () => f.classList.toggle('on'));
+}
+
+/* ---------- Trauma: decisión, fémur, Rx ---------- */
+function trauma() {
+  $$('.qbtn').forEach(b => b.onclick = () => {
+    const si = b.dataset.q === 'si';
+    $('#brSi').classList.toggle('off', !si); $('#brNo').classList.toggle('off', si);
+    $$('.qbtn').forEach(x => x.classList.toggle('dim', x !== b));
+  });
+  // fémur proximal
+  const C = [205, 82], ax = [-.84, .54], pp = [.54, .84];
+  const seg = d => { const P = [C[0] + ax[0] * d, C[1] + ax[1] * d]; return [P[0] - pp[0] * 34, P[1] - pp[1] * 34, P[0] + pp[0] * 34, P[1] + pp[1] * 34]; };
+  const FX = [
+    { n: 'Subcapital', z: 'intra', l: seg(40) }, { n: 'Transcervical', z: 'intra', l: seg(64) }, { n: 'Basicervical', z: 'intra', l: seg(88) },
+    { n: 'Intertrocantérica', z: 'extra', l: [70, 118, 156, 196] }, { n: 'Subtrocantérica', z: 'extra', l: [76, 236, 156, 228] }
+  ];
+  const svg = $('#femurSvg');
+  const drawF = sel => {
+    svg.innerHTML = `
+      <ellipse cx="160" cy="112" rx="88" ry="52" transform="rotate(-33 160 112)" fill="#e8f0fd" stroke="#2f6fd6" stroke-width="2.5" stroke-dasharray="8 6"/>
+      <path d="M176,52 C146,66 112,84 96,88 C80,80 64,90 64,110 C64,140 76,170 82,210 L90,395 L150,395 L146,240 C152,222 168,208 166,196 C160,186 150,186 146,182 C162,150 182,128 200,116 Z" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+      <circle cx="${C[0]}" cy="${C[1]}" r="40" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+      <text x="${C[0]}" y="${C[1] + 5}" font-size="12" font-weight="700" fill="#7a5a35" text-anchor="middle">Cabeza</text>
+      <text x="200" y="166" font-size="11.5" font-weight="800" fill="#2f6fd6">Cápsula</text>
+      <text x="196" y="270" font-size="11" font-weight="800" fill="#2f6fd6">Intracapsular</text><text x="196" y="286" font-size="11" font-weight="800" fill="#d98a00">Extracapsular</text>
+      ${FX.map((f, i) => `<g style="cursor:pointer" data-f="${i}"><line x1="${f.l[0]}" y1="${f.l[1]}" x2="${f.l[2]}" y2="${f.l[3]}" stroke="${sel === i ? '#e5484d' : (f.z === 'intra' ? '#2f6fd6' : '#d98a00')}" stroke-width="${sel === i ? 6 : 3.5}" stroke-linecap="round" ${sel === i ? 'class="draw"' : ''} stroke-dasharray="${sel === i ? '' : '6 5'}"/>
+        <circle cx="${f.l[2] + (i < 3 ? 12 : 14)}" cy="${f.l[3] + (i < 3 ? 6 : 0)}" r="11" fill="${sel === i ? '#e5484d' : (f.z === 'intra' ? '#2f6fd6' : '#d98a00')}"/><text x="${f.l[2] + (i < 3 ? 12 : 14)}" y="${f.l[3] + (i < 3 ? 10 : 4)}" font-size="12" font-weight="800" fill="#fff" text-anchor="middle">${i + 1}</text></g>`).join('')}`;
+    $$('#frxList .frx').forEach((x, i) => x.classList.toggle('on', i === sel));
+  };
+  $('#frxList').innerHTML = `<span class="lbl" style="color:var(--exa)">Intracapsulares · cuello</span>` + FX.map((f, i) => (i === 3 ? `<span class="lbl" style="color:var(--ins);margin-top:6px">Extracapsulares</span>` : '') + `<div class="frx" data-f="${i}"><span class="b" style="background:${f.z === 'intra' ? 'var(--exa)' : 'var(--ins)'}">${i + 1}</span><b style="font-size:14px">${f.n}</b></div>`).join('');
+  $('#frxList').addEventListener('click', e => { const x = e.target.closest('[data-f]'); if (x) drawF(+x.dataset.f); });
+  svg.addEventListener('click', e => { const x = e.target.closest('[data-f]'); if (x) drawF(+x.dataset.f); });
+  drawF(3);
+  // Rx pertrocantérica
+  $('#rxPertroBase').innerHTML = rxSchema('pertro'); $('#rxLux').innerHTML = rxSchema('lux'); $('#rxPelvis').innerHTML = rxSchema('pelvis');
+  const ov = $('#rxPertroOv');
+  const rx = k => {
+    ov.innerHTML = `` +
+      (k === 'trazo' ? `<ellipse cx="52" cy="198" rx="48" ry="50" fill="none" stroke="#ff4d4d" stroke-width="3.5" stroke-dasharray="9 6"/><path class="draw" d="M14,166 C34,178 58,192 88,212" fill="none" stroke="#ffd166" stroke-width="3.5" stroke-linecap="round"/><rect x="8" y="260" width="186" height="28" rx="14" fill="#ff4d4d"/><text x="101" y="279" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">Trazo pertrocantérico</text>` : '') +
+      (k === 'asc' ? `<ellipse cx="52" cy="198" rx="48" ry="50" fill="none" stroke="#ff4d4d" stroke-width="3" stroke-dasharray="9 6" opacity=".6"/><line class="flow" x1="40" y1="318" x2="40" y2="240" stroke="#3ddc6f" stroke-width="5" marker-end="url(#rxah)"/><defs><marker id="rxah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#3ddc6f"/></marker></defs><rect x="56" y="258" width="220" height="44" rx="12" fill="rgba(4,48,43,.9)"/><text x="166" y="276" font-size="12.5" font-weight="800" fill="#3ddc6f" text-anchor="middle">Ascenso del fragmento distal</text><text x="166" y="293" font-size="11.5" font-weight="600" fill="#fff" text-anchor="middle">acortamiento · varo</text>` : '');
+    $$('[data-rx]').forEach(b => b.classList.toggle('on', b.dataset.rx === k));
+  };
+  $$('[data-rx]').forEach(b => b.onclick = () => rx(b.dataset.rx));
+  rx('trazo');
+}
+
+
+/* ---------- Esquemas radiológicos dibujados (sin imágenes reales) ---------- */
+function rxSchema(kind) {
+  const S = 'stroke="#dfe8e4" stroke-width="2.4" fill="none" stroke-linejoin="round"';
+  const B = 'fill="rgba(223,232,228,.16)" stroke="#dfe8e4" stroke-width="2.4" stroke-linejoin="round"';
+  const femur = (mir, headDy = 0, headDx = 0) => `<g${mir ? ' transform="translate(402,0) scale(-1,1)"' : ''}>
+    <path d="M70,${158 + headDy} C52,166 34,166 22,164 C10,170 6,186 10,206 C14,240 20,280 24,335 L66,335 C64,290 64,250 70,224 C78,220 86,214 84,206 C80,200 74,198 72,194 C80,186 88,178 ${92 + headDx},${172 + headDy}" ${B}/>
+    <circle cx="${78 + headDx}" cy="${150 + headDy}" r="23" ${B}/></g>`;
+  const pelvis = `
+    <path d="M196,58 C160,40 112,36 88,52 C70,66 66,96 72,120 C78,140 90,150 96,160" ${S}/>
+    <path d="M206,58 C242,40 290,36 314,52 C332,66 336,96 330,120 C324,140 312,150 306,160" ${S}/>
+    <path d="M168,62 C190,52 212,52 234,62 L226,118 C220,140 210,156 201,166 C192,156 182,140 176,118 Z" ${B}/>
+    <ellipse cx="201" cy="178" rx="84" ry="66" ${S}/>
+    <path d="M96,160 C96,186 104,206 120,222 C140,240 168,252 192,256 M306,160 C306,186 298,206 282,222 C262,240 234,252 210,256" ${S}/>
+    <ellipse cx="150" cy="246" rx="22" ry="17" ${S}/><ellipse cx="252" cy="246" rx="22" ry="17" ${S}/>
+    <path d="M110,236 C118,268 142,280 168,274 C182,270 190,266 196,262 M292,236 C284,268 260,280 234,274 C220,270 212,266 206,262" ${S}/>
+    <line x1="197" y1="250" x2="197" y2="274" stroke="#dfe8e4" stroke-width="2.4"/><line x1="205" y1="250" x2="205" y2="274" stroke="#dfe8e4" stroke-width="2.4"/>
+    <path d="M100,146 A26,26 0 0 1 98,178" ${S}/><path d="M302,146 A26,26 0 0 0 304,178" ${S}/>`;
+  let extra = '', fr = femur(0), fl = femur(1);
+  if (kind === 'lux') {
+    fr = femur(0, -62, 22);
+    extra = `<path d="M100,146 A26,26 0 0 1 98,178" stroke="#ffd166" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+      <rect x="124" y="28" width="172" height="28" rx="14" fill="#e5484d"/><text x="210" y="47" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">Cabeza fuera y arriba</text>
+      <line x1="140" y1="54" x2="112" y2="78" stroke="#e5484d" stroke-width="2"/>
+      <line x1="104" y1="170" x2="132" y2="196" stroke="#ffd166" stroke-width="2"/><circle cx="103" cy="168" r="3" fill="#ffd166"/><rect x="128" y="192" width="134" height="26" rx="13" fill="rgba(4,48,43,.92)"/><text x="195" y="210" font-size="11.5" font-weight="700" fill="#ffd166" text-anchor="middle">Acetábulo vacío</text>`;
+  }
+  if (kind === 'pelvis') {
+    extra = `<path d="M150,218 L160,228 L152,238 L162,248" stroke="#ff4d4d" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M166,262 L174,272 L168,282" stroke="#ff4d4d" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M236,72 L242,84 L236,96 L244,108" stroke="#ff4d4d" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="201" cy="178" rx="96" ry="78" fill="none" stroke="#ff4d4d" stroke-width="2.5" stroke-dasharray="9 6" opacity=".8"/>
+      <rect x="101" y="280" width="200" height="28" rx="14" fill="#ff4d4d"/><text x="201" y="299" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">Ruptura del anillo pélvico</text>`;
+  }
+  return `<rect width="402" height="335" fill="#0e1a1c"/>${pelvis}${fl}${fr}${extra}<text x="386" y="22" font-size="18" font-weight="800" fill="#e6efe9">R</text>
+    <rect x="0" y="312" width="402" height="23" fill="rgba(0,0,0,.65)"/><text x="201" y="328" font-size="10.5" fill="#b8ccc6" text-anchor="middle">Esquema ilustrativo · no es una radiografía real</text>`;
+}
+
+/* ---------- Pediatría ---------- */
+const PED = [
+  { id: 'sa', n: 'Artritis séptica', a: [0, 3], col: '#e5484d', sris: 1, age: '< 3 años', s: ['Fiebre · mal estado general', 'Dolor intenso, no apoya', 'Cadera en flexión, abducción y RE', 'Leucocitosis · PCR y VSG elevadas'], tag: 'Urgencia' },
+  { id: 'st', n: 'Sinovitis transitoria', a: [3, 8], col: '#e0a400', sris: 0, age: '3 – 8 años', s: ['Infección viral reciente', 'Afebril · buen estado general', 'Cojera leve, autolimitada (1–2 sem)'] },
+  { id: 'lcp', n: 'Legg-Calvé-Perthes', a: [4, 8], col: '#a855f7', sris: 0, age: '4 – 8 años', s: ['Varones · inicio insidioso', 'Dolor referido a rodilla o muslo', 'Limitación de abducción y RI', 'Necrosis avascular de la cabeza'] },
+  { id: 'epi', n: 'Epifisiólisis', a: [10, 16], col: '#2f6fd6', sris: 0, age: '10 – 16 años', s: ['Adolescente con obesidad', 'Dolor de rodilla o muslo', 'Signo de Drehmann: RE al flexionar', 'Línea de Klein alterada'] }
+];
+function miniHip(id) {
+  const bone = '#f4e6cc', st = '#8a6a45';
+  const cup = `<path d="M8,8 H202 V62 H145 A40,40 0 0 0 65,62 H8 Z" fill="#efe0c4" stroke="${st}" stroke-width="2"/>`;
+  const capsN = 'M65,62 C48,92 48,124 60,142 L92,152 C120,122 152,96 145,62 Z';
+  const capsD = 'M65,62 C26,92 26,142 54,158 L100,164 C146,140 176,98 145,62 Z';
+  let neck = '<path d="M86,90 L112,100 L82,152 L52,140 Z" fill="' + bone + '" stroke="' + st + '" stroke-width="2"/>';
+  let head = `<circle cx="105" cy="70" r="33" fill="${bone}" stroke="${st}" stroke-width="2"/>`;
+  let under = `<path d="${capsN}" fill="none" stroke="#9fb3ad" stroke-width="1.6" stroke-dasharray="4 3"/>`;
+  let over = '', cap = '';
+  if (id === 'sa') {
+    under = `<path d="${capsD}" fill="rgba(160,190,40,.45)" stroke="#7d9a1c" stroke-width="2.4"/><circle cx="105" cy="62" r="40" fill="rgba(160,190,40,.45)"/>`;
+    cap = '<span style="color:#5f7a10">Pus · cápsula distendida</span>';
+  }
+  if (id === 'st') {
+    under = `<path d="${capsN}" fill="rgba(90,169,207,.35)" stroke="#5aa9cf" stroke-width="2"/><circle cx="105" cy="62" r="40" fill="rgba(90,169,207,.35)"/>`;
+    cap = '<span style="color:#2a8fb3">Derrame leve · sin pus ni hueso afectado</span>';
+  }
+  if (id === 'lcp') {
+    head = `<path d="M72,80 C72,62 86,54 105,54 C124,54 138,62 138,80 A33,22 0 0 1 72,80 Z" fill="#cdb898" stroke="${st}" stroke-width="2"/><ellipse cx="105" cy="68" rx="20" ry="9" fill="#9c8462"/>`;
+    cap = '<span style="color:#7e3fc4">Cabeza aplanada · necrosis avascular</span>';
+  }
+  if (id === 'epi') {
+    neck = '<path d="M58,86 L88,100 L62,152 L30,140 Z" fill="' + bone + '" stroke="' + st + '" stroke-width="2"/>';
+    head = `<circle cx="106" cy="72" r="30" fill="${bone}" stroke="${st}" stroke-width="2"/>`;
+    over = `<line x1="24" y1="152" x2="76" y2="52" stroke="#2f6fd6" stroke-width="2.5" stroke-dasharray="5 4"/>`;
+    cap = '<span style="color:#2f6fd6">Línea de Klein no toca la epífisis, que se desliza abajo y atrás</span>';
+  }
+  return `<svg viewBox="0 0 210 166">${under}${neck}${head}${cup}${over}</svg><div class="hipcap">${cap}</div>`;
+}
+function pediatrics() {
+  const sc = $('#ageScale');
+  sc.innerHTML = PED.map((p, i) => `<div class="age-bar" data-e="${p.id}" style="left:${p.a[0] / 16 * 100}%;width:${(p.a[1] - p.a[0]) / 16 * 100}%;top:${i * 30}px;background:${p.col}">${p.n}</div>`).join('') +
+    `<div class="age-axis">${[0, 2, 4, 6, 8, 10, 12, 14, 16].map(v => `<span style="left:${v / 16 * 100}%">${v}</span>`).join('')}</div><div class="age-cursor" id="ageCur"></div>`;
+  sc.style.height = '150px';
+  $('#pedCards').innerHTML = PED.map(p => `<div class="pcard" data-e="${p.id}"><div class="ph" style="background:${p.col}"><h4>${p.n}${p.tag ? ' · ' + p.tag : ''}</h4><small>Edad típica: ${p.age}</small></div>${miniHip(p.id)}<ul>${p.s.map(x => `<li>${x}</li>`).join('')}</ul><span class="pill sris" style="background:${p.sris ? 'var(--painl)' : 'var(--gl)'};color:${p.sris ? 'var(--pain)' : 'var(--g2)'}">SRIS: ${p.sris ? 'SÍ' : 'NO'}</span></div>`).join('');
+  let sris = false, obe = false;
+  const upd = () => {
+    const a = +$('#age').value; $('#ageCur').style.left = (a / 16 * 100) + '%'; $('#ageVal').textContent = a + ' años';
+    const byAge = PED.filter(p => a >= p.a[0] && (a < p.a[1] || (p.a[1] === 16 && a <= 16))).map(p => p.id);
+    const hits = [...byAge];
+    if (sris && !hits.includes('sa')) hits.push('sa');
+    if (obe && !hits.includes('epi')) hits.push('epi');
+    $$('.age-bar,.pcard').forEach(el => { el.classList.toggle('hit', hits.includes(el.dataset.e)); el.classList.toggle('dim', !hits.includes(el.dataset.e)); });
+    $$('#cmpTable tbody tr').forEach(tr => tr.classList.toggle('hit', hits.includes(tr.dataset.e)));
+    const nm = id => PED.find(p => p.id === id).n;
+    let html = byAge.length ? `<h4>${byAge.map(nm).join(' · ')}</h4><p class="muted">Síndromes típicos a los ${a} años.</p>` : `<h4>Sin síndrome típico a los ${a} años</h4><p class="muted">Ninguna de las cuatro entidades es típica a esta edad: amplíe el diagnóstico diferencial.</p>`;
+    if (sris) html += `<p style="margin-top:8px;color:var(--pain);font-weight:700">Con SRIS: descartar primero artritis séptica (urgencia), a cualquier edad.</p>`;
+    if (obe) html += `<p style="margin-top:6px;color:var(--exa);font-weight:700">Adolescente con obesidad y dolor de rodilla o muslo: pensar en epifisiólisis${a < 10 ? ' (edad típica de 10 a 16 años)' : ''}.</p>`;
+    $('#ageOut').innerHTML = html;
+  };
+  $('#age').oninput = upd;
+  $('#srisSw').onclick = e => { e.preventDefault(); sris = !sris; $('#srisSw').classList.toggle('on', sris); upd(); };
+  $('#obeSw').onclick = e => { e.preventDefault(); obe = !obe; $('#obeSw').classList.toggle('on', obe); upd(); };
+  upd();
+  perthes();
+}
+function perthes() {
+  const svg = $('#perthesSvg');
+  const CUP = [300, 175], RC = 112, RH = 88, DIR = [Math.cos(50 * D2R), -Math.sin(50 * D2R)];
+  const fossa = [CUP[0] + RC * DIR[0], CUP[1] + RC * DIR[1]];
+  const MSG = [
+    [0, 'Normal: el ligamento redondo está libre en el espacio articular y su arteria irriga la cabeza.'],
+    [.25, 'La cabeza femoral impacta contra el acetábulo.'],
+    [.5, 'El impacto comprime el ligamento redondo y la arteria que lleva en su interior.'],
+    [.7, 'Se pierde la irrigación de la cabeza femoral: necrosis avascular.'],
+    [.88, 'La cabeza necrótica se aplana secundariamente.']
+  ];
+  let flow = 0;
+  const draw = t => {
+    const imp = Math.min(1, t / .45);                       // impacto
+    const nec = Math.max(0, Math.min(1, (t - .6) / .25));   // necrosis
+    const flat = Math.max(0, (t - .82) / .18);              // aplanamiento
+    const hc = [CUP[0] + 24 * imp * DIR[0], 192 + (CUP[1] - 192) * imp + 24 * imp * DIR[1]];
+    const fov = [hc[0] + RH * DIR[0], hc[1] + RH * DIR[1]];
+    const len = Math.hypot(fossa[0] - fov[0], fossa[1] - fov[1]);
+    const mid = [(fossa[0] + fov[0]) / 2, (fossa[1] + fov[1]) / 2];
+    const ang = Math.atan2(fossa[1] - fov[1], fossa[0] - fov[0]) * 180 / Math.PI;
+    const ligW = 12 + 14 * imp;                                // se ensancha al comprimirse
+    const art = imp < .75;
+    const col = nec > 0 ? `rgb(${244 - 70 * nec},${230 - 80 * nec},${204 - 90 * nec})` : '#f4e6cc';
+    const ry = RH - 16 * flat, cyH = hc[1] + 16 * flat;
+    let dots = '';
+    if (art) for (let k = 0; k < 3; k++) { const u = ((flow + k / 3) % 1); dots += `<circle cx="${fossa[0] + (fov[0] - fossa[0]) * u}" cy="${fossa[1] + (fov[1] - fossa[1]) * u}" r="3" fill="#fff"/>`; }
+    const a1 = [CUP[0] + RC * Math.cos(200 * D2R), CUP[1] + RC * Math.sin(200 * D2R)], a2 = [CUP[0] + RC * Math.cos(340 * D2R), CUP[1] + RC * Math.sin(340 * D2R)];
+    svg.innerHTML = `
+      <path d="M40,0 H560 V${a2[1]} H${a2[0]} A${RC},${RC} 0 0 0 ${a1[0]},${a1[1]} H40 Z" fill="#efe0c4" stroke="#8a6a45" stroke-width="2.5"/>
+      <path d="M${a1[0] + 6},${a1[1] - 4} A${RC - 6},${RC - 6} 0 0 1 ${a2[0] - 6},${a2[1] - 4}" fill="none" stroke="#8fd3ea" stroke-width="5"/>
+      <path d="M${hc[0] - 50},${hc[1] + 60} L${hc[0] - 150},${hc[1] + 150} L${hc[0] - 70},${hc[1] + 175} L${hc[0] + 10},${hc[1] + 84} Z" fill="#f4e6cc" stroke="#8a6a45" stroke-width="2.5"/>
+      <ellipse cx="${hc[0]}" cy="${cyH}" rx="${RH}" ry="${ry}" fill="${col}" stroke="#8a6a45" stroke-width="2.5"/>
+      ${nec > 0 ? `<ellipse cx="${hc[0] + 6}" cy="${cyH - 10}" rx="${52}" ry="${ry * .5}" fill="#8f7a5c" opacity="${.75 * nec}"/>` : ''}
+      <g transform="translate(${mid[0]},${mid[1]}) rotate(${ang})">
+        <rect x="${-len / 2 - 6}" y="${-ligW / 2}" width="${len + 12}" height="${ligW}" rx="${ligW / 2}" fill="#2f6fd6" opacity=".9"/>
+        <line x1="${-len / 2 - 4}" y1="0" x2="${len / 2 + 4}" y2="0" stroke="${art ? '#e5484d' : '#b9c4c2'}" stroke-width="4" stroke-dasharray="${art ? 'none' : '4 4'}"/>
+      </g>
+      ${dots}
+      ${!art ? `<path d="M${mid[0] - 9},${mid[1] - 9} l18,18 m0,-18 l-18,18" stroke="#e5484d" stroke-width="4" stroke-linecap="round"/>` : ''}
+      ${imp > .9 ? `<g class="painpulse" style="transform-origin:${fov[0]}px ${fov[1]}px"><circle cx="${fov[0]}" cy="${fov[1]}" r="26" fill="url(#perG)"/></g>` : ''}
+      <defs><radialGradient id="perG"><stop offset="0" stop-color="#ff2d2d" stop-opacity=".7"/><stop offset="1" stop-color="#ff4d4d" stop-opacity="0"/></radialGradient></defs>
+      <g font-size="13" font-weight="700">
+        <text x="80" y="34" fill="#7a5a35" font-weight="800">Acetábulo</text>
+        <text x="48" y="${Math.max(232, cyH + 40)}" fill="#7a5a35">${flat > .2 ? 'Cabeza aplanada' : nec > .3 ? 'Cabeza necrótica' : 'Cabeza femoral'}</text>
+        <line x1="150" y1="${Math.max(228, cyH + 36)}" x2="${hc[0] - 60}" y2="${cyH + 30}" stroke="#7a5a35" stroke-width="1.3"/>
+        <text x="590" y="40" fill="#2f6fd6" text-anchor="end">${imp > .6 ? 'Ligamento redondo comprimido' : 'Ligamento redondo'}</text>
+        <line x1="420" y1="46" x2="${mid[0] + 8}" y2="${mid[1] - 4}" stroke="#2f6fd6" stroke-width="1.3"/>
+        <text x="590" y="270" fill="#e5484d" text-anchor="end">${art ? 'Arteria del ligamento redondo' : 'Irrigación perdida'}</text>
+        <line x1="430" y1="256" x2="${mid[0] + 4}" y2="${mid[1] + 6}" stroke="#e5484d" stroke-width="1.3"/>
+      </g>`;
+    let m = MSG[0][1]; for (const [th, s] of MSG) if (t >= th) m = s;
+    $('#perthesMsg').textContent = m;
+  };
+  let st = 0, cur = 0, busy = false;
+  const loop = () => { flow = (flow + .012) % 1; if (!busy) draw(cur); requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+  $('#perthesBtn').onclick = () => {
+    if (busy) return; busy = true;
+    const from = st, to = st ? 0 : 1, t0 = performance.now(), dur = to ? 6000 : 1500;
+    const f = now => { const t = Math.min(1, (now - t0) / dur); cur = from + (to - from) * (to ? t : ease(t)); draw(cur); if (t < 1) requestAnimationFrame(f); else { st = to; busy = false; $('#perthesBtn').innerHTML = st ? 'Volver a normal' : '<svg class="i" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>Ver mecanismo'; } };
+    requestAnimationFrame(f);
+  };
+}
+
+/* ---------- Navegación ---------- */
+function nav() {
+  $$('[data-goto]').forEach(b => b.addEventListener('click', () => {
+    Lab.load(b.dataset.goto);
+    $('#maniobras').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => Lab.play(), 900);
+  }));
+  const links = $$('nav.top a'), secs = links.map(a => $(a.getAttribute('href')));
+  const onS = () => { let k = -1; secs.forEach((s, i) => { if (s.getBoundingClientRect().top < 140) k = i; }); links.forEach((a, i) => a.classList.toggle('on', i === k)); };
+  window.addEventListener('scroll', onS, { passive: true }); onS();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const run = (n, f) => { try { f(); } catch (e) { console.error(n, e); } };
+  run('pelvis', pelvisSvg); run('hip', hipSvg); run('muscles', muscles); run('fai', fai);
+  run('anam', anamnesis); run('trauma', trauma); run('lab', () => Lab.init()); run('gait', gait); run('ped', pediatrics); run('nav', nav);
+});
+
+</script>
+</body>
+</html>
