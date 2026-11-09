@@ -331,6 +331,19 @@ footer small{display:block;color:#93b5ab}
 #player .step-card{order:5;padding:14px 22px 18px;border-top:1.5px solid var(--line);min-height:0}
 #player .stage-wrap svg{max-height:clamp(260px,calc(100vh - 400px),420px)}
 }
+@media(max-width:700px){
+.frx-grid{grid-template-columns:1fr!important}
+#femurSvg{width:100%;max-width:360px;margin:0 auto;display:block}
+.stage-wrap{display:flex;flex-direction:column}
+.stage-wrap .phase-badge{position:static;order:0;margin:12px 12px 0;align-self:flex-start;max-width:calc(100% - 24px)}
+.stage-wrap .cam-ctrl{position:static;order:1;margin:8px 12px 0;flex-wrap:wrap}
+.stage-wrap svg{order:2}
+.stage-wrap .drag-hint{position:static;order:3;margin:0 12px 10px;align-self:flex-start}
+.age-scale{height:132px;margin-top:22px}
+.age-bar{height:10px;padding:0;overflow:visible;margin-top:12px;z-index:2}
+.age-bar span{position:absolute;left:0;bottom:12px;font-size:11.5px;font-weight:700;color:var(--ink);white-space:nowrap;z-index:3;padding:0 3px;background:rgba(255,255,255,.85);border-radius:4px}
+.age-bar.dim{opacity:.35}
+}
 footer.mfoot{margin-top:80px;background:#022320;color:#cfe3dc;padding:40px 22px;text-align:center}
 footer.mfoot .ref{font-size:13px;opacity:.88;max-width:92ch;margin:0 auto 14px;line-height:1.65}
 footer.mfoot .ref b{color:#fff}
@@ -535,7 +548,7 @@ footer.mfoot .ref b{color:#fff}
       <div class="card">
         <span class="lbl">Fractura de cadera · clasificación</span>
         <h3 style="font-size:26px;font-weight:800;margin:6px 0 12px">¿Dentro o fuera de la cápsula?</h3>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
+        <div class="frx-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start">
           <svg class="anat-svg" id="femurSvg" viewBox="0 0 300 400"></svg>
           <div class="frx-list" id="frxList"></div>
         </div>
@@ -1985,7 +1998,7 @@ function miniHip(id) {
 }
 function pediatrics() {
   const sc = $('#ageScale');
-  sc.innerHTML = PED.map((p, i) => `<div class="age-bar" data-e="${p.id}" style="left:${p.a[0] / 16 * 100}%;width:${(p.a[1] - p.a[0]) / 16 * 100}%;top:${i * 30}px;background:${p.col}">${p.n}</div>`).join('') +
+  sc.innerHTML = PED.map((p, i) => `<div class="age-bar" data-e="${p.id}" style="left:${p.a[0] / 16 * 100}%;width:${(p.a[1] - p.a[0]) / 16 * 100}%;top:${i * 30}px;background:${p.col}"><span>${p.n}</span></div>`).join('') +
     `<div class="age-axis">${[0, 2, 4, 6, 8, 10, 12, 14, 16].map(v => `<span style="left:${v / 16 * 100}%">${v}</span>`).join('')}</div><div class="age-cursor" id="ageCur"></div>`;
   sc.style.height = '150px';
   $('#pedCards').innerHTML = PED.map(p => `<div class="pcard" data-e="${p.id}"><div class="ph" style="background:${p.col}"><h4>${p.n}${p.tag ? ' · ' + p.tag : ''}</h4><small>Edad típica: ${p.age}</small></div>${miniHip(p.id)}<ul>${p.s.map(x => `<li>${x}</li>`).join('')}</ul><span class="pill sris" style="background:${p.sris ? 'var(--painl)' : 'var(--gl)'};color:${p.sris ? 'var(--pain)' : 'var(--g2)'}">SRIS: ${p.sris ? 'SÍ' : 'NO'}</span></div>`).join('');
