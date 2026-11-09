@@ -406,7 +406,7 @@ footer.mfoot .ref b{color:#fff}
           <span class="lbl">Pelvis · vista anterior</span>
           <div class="tabs sub-tabs"><button class="tab" id="btnFuse">Formar el acetábulo</button><button class="tab" id="btnLabels">Etiquetas</button></div>
         </div>
-        <svg class="anat-svg" id="pelvisSvg" viewBox="0 0 600 420"></svg>
+        <svg class="anat-svg" id="pelvisSvg" viewBox="-50 0 680 420"></svg>
         <div class="info" id="pelvisInfo"><h4>Hueso coxal</h4><p class="muted">Ilion + isquion + pubis, que se unen en el acetábulo. Por detrás, sacro y cóccix. Articulaciones: sacroilíaca y sínfisis del pubis.</p></div>
       </div>
       <div class="card">
@@ -524,7 +524,7 @@ footer.mfoot .ref b{color:#fff}
           <button class="bitem" data-goto="faber"><span class="b" style="background:var(--g2)">1</span><span>FABER · Patrick<small>dónde aparece el dolor</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
           <button class="bitem" data-goto="thomas"><span class="b" style="background:var(--g2)">2</span><span>Thomas<small>déficit de extensión</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
           <button class="bitem" data-goto="ober"><span class="b" style="background:var(--g2)">3</span><span>Ober<small>restricción de la aducción</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
-          <button class="bitem" data-goto="fadir"><span class="b" style="background:var(--g2)">4</span><span>FADIR<small>dolor inguinal intraarticular</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <button class="bitem" data-goto="fadir"><span class="b" style="background:var(--g2)">4</span><span>Test de FADIR<small>dolor inguinal intraarticular</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
           <button class="bitem" data-goto="trend"><span class="b" style="background:var(--g2)">5</span><span>Trendelenburg<small>debilidad del glúteo medio</small></span><span class="goto">Ver <svg class="i" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
         </div>
       </div>
@@ -572,7 +572,7 @@ footer.mfoot .ref b{color:#fff}
 <section class="sec" id="maniobras">
   <div class="wrap">
     <div class="sec-head">
-      <div><span class="num">06 · Laboratorio de maniobras</span><h2>Paso a paso, con el momento del dolor</h2></div>
+      <div><span class="num">06 · Laboratorio de maniobras</span><h2>Semiotécnica – Modelo 3D interactivo</h2></div>
       <p>Las maniobras de cadera comienzan en fase activa (el paciente las hace solo) y continúan en fase guiada (el examinador moviliza y fija). Cambie el resultado entre normal y positivo para comparar.</p>
     </div>
     <div class="lab">
@@ -1260,7 +1260,7 @@ const MAN = {
   },
 
   fadir: {
-    name: 'FADIR', group: 'Sin trauma', short: 'dolor inguinal intraarticular', posture: 'supine', cam: { yaw: -30, pitch: 26, k: 3.1, target: [22, 14, 0], cy: 310 },
+    name: 'Test de FADIR', group: 'Sin trauma', short: 'dolor inguinal intraarticular', posture: 'supine', cam: { yaw: -30, pitch: 26, k: 3.1, target: [22, 14, 0], cy: 310 },
     sub: 'Decúbito supino · cadera y rodilla derechas a 90°',
     variants: [{ id: 'n', l: 'Normal' }, { id: 'pos', l: '(+) Dolor inguinal', pos: 1 }],
     result: {
@@ -1735,7 +1735,7 @@ function pelvisSvg() {
     <rect x="295" y="298" width="10" height="40" rx="4" fill="#4fb6d6"/>
     <g id="pLabels">
       ${L(118, 120, 40, 60, 'Ilion', 'start')}${L(150, 94, 168, 40, 'Cresta ilíaca')}${L(84, 168, 30, 200, 'EIAS')}
-      ${L(188, 272, 60, 262, 'Acetábulo')}${L(182, 360, 110, 392, 'Isquion')}${L(250, 300, 236, 404, 'Agujero obturador')}
+      ${L(188, 272, 60, 262, 'Acetábulo')}${L(182, 360, 110, 392, 'Isquion')}${L(214, 326, 236, 404, 'Agujero obturador')}
       ${L(410, 320, 470, 392, 'Pubis')}${L(300, 318, 360, 410, 'Sínfisis del pubis')}${L(330, 170, 450, 74, 'Sacro')}${L(300, 304, 360, 270, 'Cóccix')}${L(342, 175, 500, 150, 'Art. sacroilíaca')}
     </g>`;
   let labels = true;
